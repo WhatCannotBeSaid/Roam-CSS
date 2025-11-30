@@ -1,0 +1,759 @@
+:root {
+    --header-font:"Calligraph421 BT", "方正颜真卿楷书 简";
+    --body-font:"Palatino Linotype", "方正屏显雅宋_GBK";
+    --code-font:"Optima","方正屏显雅宋_GBK";
+    --font-size: 15px;
+    --bg-color: #D1E2DE;
+    --page-color: #B9DEC9;
+    --text-color: #3f4758;
+    --light-text-color: #7086A9;
+    --page-tag-color: #EE2C79;
+    --color-primary: #ec6f35;
+    --color-primary-light: #ff913c;
+    --color-primary-highlight: #fcc1786d;
+    --color-secondary: #7056F2;
+    --color-subtle-border: #e8dddb;
+    /* Tag Color Palette */
+    --tag-tweet: #81d5ed;
+    --tag-literature: #9769ff;
+    --tag-evergreens: #0dbac6;
+    --tag-seedling: #0dbac6;
+    --tag-idea-bank: #fcb815;
+    --tag-illustrated: #7172fc;
+    --tag-garden: #9dbc13;
+    --tag-video-tutorial: #db3b8d;
+    --tag-essay: #adcb2a;
+    --tag-livestream: #b979cf;
+    --tag-talk: #7172fc;
+    --tag-waiting: #f9c866;
+    --tag-researching: #ff9d66;
+    --tag-synthesising: #fc766f;
+    --tag-alive: #ee5f85;
+    --tag-book: #119bf0;
+    --tag-evergreen-page: #00acc0;
+    --tag-arrow: #35b2d4;
+    --tag-project: #5135d4;
+    --tag-area: #d4357f;
+    --tag-course: #5391f8;
+    --tag-idea: #fcb815;
+    --tag-claim-color: #FFC585;
+    --tag-questions-color: #91B9E5;
+    --tag-response-color: #AFA0E1;
+    --tag-evidence-color: #F99292;
+    --tag-directquote-color: #A5C16A;
+    --block-claim-bg: #FDF8EE;
+    --block-questions-bg: #ECF5FB;
+    --block-response-bg: #F3F1FD;
+    --block-evidence-bg: #FEEDED;
+    --block-directquote-bg: #F4F6D8;
+}
+
+/* Body Colours */
+body, #app {
+  background: var(--bg-color);
+}
+.roam-article {
+  padding-right: 10px !important;
+  padding-left: 0px !important;
+}
+.roam-article > div {
+  padding: 30px 30px 30px 30px;
+  background: var(--page-color);
+  box-shadow: var(--page-shadow);
+  border: 1px solid #B9DEC9;
+  border-radius: 6px;
+  margin-top: 10px !important;
+  width: auto;
+}
+.roam-body-main {
+  top: 0 !important;
+  height: 100% !important;
+  width: auto !important;
+  position: relative !important;
+  padding-left: 0px;
+}
+.roam-main {
+  width: unset !important;
+  max-width: 100% !important;
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: auto;
+  transition: padding-left 0.15s ease-out;
+}
+
+.block-highlight-blue {
+background-color: var(--color-primary-highlight) !important;
+z-index: 99;
+}
+
+div::selection, textarea::selection {
+background-color: var(--color-primary-highlight);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, .rm-level1, .rm-level2, .rm-level3 .rm-title-editing-display {
+  font-family: var(--header-font);
+}
+.rm-title-editing-display textarea {
+  font-family: var(--header-font);
+  font-size: 1em;
+}
+div, textarea {
+  font-family: var(--body-font);
+  font-size: var(--font-size);
+  color: var(--text-color);
+}
+
+
+
+/* Base Pill Style (used by tag variants) */
+.tag-pill-base {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 15px;
+  border: 1px solid rgba(0,0,0,0.06);
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* Embed Blocks */
+.rm-embed-container {
+  background: #fcfdfd;
+  border: 1px solid var(--color-subtle-border);
+  border-radius: 4px;
+  padding: 0.6em 0.4em;
+  margin: 0.4em 0;
+}
+.block-highlight-yellow {
+  background-color: white;
+}
+
+/* Code Syntax */
+code {
+  font-family: var(--code-font);
+  background: #F0F4F8;
+  color: var(--text-color);
+  border: none;
+  padding: 4px 6px;
+  opacity: 90%;
+}
+
+/* Queries */
+.rm-query {
+  border: 0.5px solid #e4e9ec;
+  border-radius: 5px;
+}
+.rm-query .rm-query-title {
+  background-color: #f7f8f8;
+  padding: 0.8em;
+  color: #d1dbe2;
+  font-size: 80%;
+}
+.rm-reference-main.rm-query-content {
+  padding: 0.8em;
+}
+.rm-reference-main, .rm-reference-item {
+  font-size: 95%;
+  opacity: 95%;
+}
+.rm-reference-main .rm-reference-item .controls {
+  margin-left: -1em;
+}
+.rm-ref-page-view {
+  padding: 0.4em 0.2em;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
+  padding: 6px;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row:hover {
+    background-color: white;
+}
+div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span {
+  font-size: 14px;
+  opacity: 80%;
+  letter-spacing: 0.04em;
+}
+div.roam-sidebar-container.noselect > div > div {
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+#block-input {
+  background: white;
+}
+.roam-body #block-input > span > div {
+  padding: 6px 24px;
+  background: white;
+}
+
+.rm-block-text, .roam-block {
+  font-size: 1.1em;
+}
+#right-sidebar > div {
+  background-color: var(--bg-color);
+  border-left: 1px solid #e9ebef;
+  padding: 20px;
+  overflow: none;
+}
+.rm-page-ref-brackets {
+  display: none;
+}
+
+
+/* Bullet Points */
+.rm-bullet .rm-bullet__inner {
+box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  background-clip: content-box;
+  border: 4px solid transparent;
+  background-color: #E3ECF2;
+}
+.rm-bullet.rm-bullet--closed .rm-bullet__inner {
+  box-sizing: content-box;
+  border: 4px solid #D8E5EE;
+}
+
+
+.block-border-left {
+  border-left: 1px solid #fff;
+}
+
+/* Kanban */
+.kanban-board {
+  background-color: #fff;
+}
+.kanban-card {
+  background-color: white;
+  margin: 8px;
+  box-shadow: 0px 1px 2px #9eb3c0;
+  padding: 10px;
+  border-radius: 2px;
+}
+.kanban-title {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 6px;
+}
+.kanban-column {
+  background-color: #e4edf2;
+  margin: 0px 4px 0px 4px;
+  padding: 4px;
+  border-radius: 3px;
+}
+
+/* Block references */
+.rm-block-ref::before {
+  content:"";
+  display: inline-block;
+  width: 2px;
+  border-radius: 2px;
+  height: 10px;
+  background: var(--color-primary-light);
+  margin-right: 6px;
+}
+.rm-block-ref:hover {
+  background: none;
+  cursor: pointer;
+}
+.rm-block-ref {
+  border-bottom: none;
+  font-size: 1em;
+  color: var(--text-color);
+  opacity: 90%;
+}
+.block-ref-count-button {
+  color: var(--color-primary);
+  font-weight: 800;
+  top: -10px;
+}
+
+
+.checkmark {
+  background: #fff;
+}
+.check-container input:checked ~ .checkmark {
+  background: #33bdea;
+}
+.check-container input:checked ~ .checkmark:after {
+  border-color: #fff;
+}
+.rm-reference-item {
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #e4e9ee;
+  margin-right: 8px;
+  flex: 1 1 100%;
+  word-break: break-word;
+  background-color: #f7f9fb;
+  padding: 8px;
+}
+
+/* Headings */
+.rm-level1, .rm-heading-level-1>.rm-block__self .rm-block__input {
+  color: #142334;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Palatino nova Pro Titling" ,"方正清刻本悦宋简体";
+}
+.rm-level2, .rm-heading-level-2>.rm-block__self .rm-block__input {
+  color: #395260;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: "Palatino nova Pro Titling", "方正清刻本悦宋简体" !important;
+}
+.rm-level3, .rm-heading-level-3>.rm-block__self .rm-block__input {
+  color:  #404A57;
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-family: "Palatino nova Pro Titling" ,"方正清刻本悦宋简体";
+}
+
+a {
+ color: var(--color-secondary);
+font-weight: 600;
+}
+.intercom-app, .intercom-launcher-frame, #intercom-container {
+  display: none;
+}
+.roam-body .roam-app .roam-sidebar-container {
+  background-color: white;
+  border-right: 1px #eee solid;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page, .roam-body .roam-app .roam-sidebar-container > * {
+  opacity: 80%;
+  box-shadow: none;
+}
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover, .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover {
+  background: white;
+  color: black;
+  opacity: 100%;
+}
+#buffer.tall {
+  height: calc(100vh - 50px);
+}
+.check-container {
+  padding-right: 4px;
+}
+span.rm-page-ref {
+  border-radius: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.center-proj {
+  text-align: center;
+}
+
+/* URL links */
+.rm-alias--external, .rm-alias--external:hover {
+  font-weight: 600;
+}
+
+/* Set the colour of popover tooltip text to white */
+.bp3-tooltip .bp3-popover-content div {
+color: white;
+}
+
+/* Page Link and Tag Colours */
+/* 优先级更高的选择器，确保页面 tag 呈现为 pill（覆盖可能的 element+class 规则） */
+span.rm-page-ref.rm-page-ref--tag {
+  border-radius: 15px;
+   display: inline-block;
+  padding: 2px 8px;
+  border-radius: 15px; /* 椭圆 */
+  background: #FF3300;
+  color: #fefefe;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* 更稳健的隐藏 '#' 实现：
+   - 将原始文本字体尺寸设为 0（以隐藏原始渲染，包括首字符），
+   - 使用 ::after 渲染 `attr(data-tag)`（不含 '#') 显示真实标签文本，
+   - 恢复子元素（如 popover target）的字体尺寸，保证交互不受影响。 */
+span.rm-page-ref[data-tag] {
+  font-size: 0; /* 隐藏原始文本 */
+  line-height: 0;
+}
+span.rm-page-ref[data-tag]::after {
+  content: attr(data-tag);
+  display: inline-block;
+  font-size: var(--font-size); /* 恢复为页面字体大小 */
+  line-height: 1.6;
+  color: inherit; /* 继承由更具体选择器（按 data-tag）设置的颜色 */
+  font-weight: inherit;
+}
+/* 恢复内部子元素（比如 popover 按钮/图标）的字体尺寸，保持交互可用 */
+span.rm-page-ref[data-tag] span,
+span.rm-page-ref[data-tag] .bp3-popover-wrapper,
+span.rm-page-ref[data-tag] .bp3-popover-target {
+  font-size: var(--font-size);
+  line-height: inherit;
+}
+.rm-page-ref--link {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.rm-extensions-settings .rm-extensions-installed .rm-extension-installed__name {
+  font-size: 14px;
+  font-weight: 600;
+  font-optical-sizing: white;
+}
+
+
+/* -------------------------- */
+
+/* Custom Data Tags and Pages */
+
+/* -------------------------- */
+/* Filled Tag Styles (with background) */
+span.rm-page-ref[data-tag="Tweet"] {
+  background: var(--tag-tweet);
+}
+span.rm-page-ref[data-tag="Literature Notes"] {
+  background: var(--tag-literature);
+}
+span.rm-page-ref[data-tag="Evergreens"] {
+  background: var(--tag-evergreens);
+}
+span.rm-page-ref[data-tag="Tweet"],
+span.rm-page-ref[data-tag="Literature Notes"],
+span.rm-page-ref[data-tag="Evergreens"],
+span[data-link-title^="Tweet"] .rm-page-ref,
+span[data-link-title^="Literature Notes"] .rm-page-ref,
+span[data-link-title^="Evergreens"] .rm-page-ref {
+  color: white;
+  padding: 3px 7px;
+  line-height: 2em;
+  font-weight: 500;
+}
+span.rm-page-ref[data-tag="Seedling"],
+span[data-link-title^="Seedling"] .rm-page-ref {
+  color: var(--tag-seedling);
+  padding: 2px;
+  font-weight: 600;
+  line-height: 1.4em;
+  font-size: 0.7em;
+  vertical-align: 10%;
+  opacity: 80%;
+}
+
+span.rm-page-ref[data-tag="Idea Bank"],
+span[data-link-title^="Idea Bank"] .rm-page-ref {
+  color: var(--tag-idea-bank);
+  padding: 3px 4px;
+  font-weight: 700;
+  line-height: 1.4em;
+}
+span.rm-page-ref[data-tag="Idea Bank"]:before {
+  content:"✦ ";
+}
+
+span.rm-page-ref[data-tag="Illustrated Notes"],
+span[data-link-title^="Illustrated Notes"] .rm-page-ref,
+span.rm-page-ref[data-tag="Garden Notes"],
+span[data-link-title^="Garden Notes"] .rm-page-ref,
+span.rm-page-ref[data-tag="Video Tutorial"],
+span[data-link-title^="Video Tutorial"] .rm-page-ref {
+  padding: 3px 4px;
+  font-weight: 700;
+  line-height: 1.4em;
+}
+
+span.rm-page-ref[data-tag="Illustrated Notes"],
+span[data-link-title^="Illustrated Notes"] .rm-page-ref {
+  color: var(--tag-illustrated);
+}
+
+span.rm-page-ref[data-tag="Garden Notes"],
+span[data-link-title^="Garden Notes"] .rm-page-ref {
+  color: var(--tag-garden);
+}
+
+span.rm-page-ref[data-tag="Video Tutorial"],
+span[data-link-title^="Video Tutorial"] .rm-page-ref {
+  color: var(--tag-video-tutorial);
+}
+/* More Filled Tag Styles */
+span.rm-page-ref[data-tag="Essay"] {
+  background: var(--tag-essay);
+}
+span.rm-page-ref[data-tag="Talk"] {
+  background: var(--tag-talk);
+}
+span.rm-page-ref[data-tag="Waiting"] {
+  background: var(--tag-waiting);
+}
+span.rm-page-ref[data-tag="Researching"] {
+  background: var(--tag-researching);
+}
+span.rm-page-ref[data-tag="Synthesising"] {
+  background: var(--tag-synthesising);
+}
+span.rm-page-ref[data-tag="Alive"] {
+  background: var(--tag-alive);
+}
+span.rm-page-ref[data-tag="Essay"],
+span.rm-page-ref[data-tag="Talk"],
+span.rm-page-ref[data-tag="Waiting"],
+span.rm-page-ref[data-tag="Researching"],
+span.rm-page-ref[data-tag="Synthesising"],
+span.rm-page-ref[data-tag="Alive"],
+span[data-link-title^="Essay"] .rm-page-ref,
+span[data-link-title^="Talk"] .rm-page-ref,
+span[data-link-title^="Waiting"] .rm-page-ref,
+span[data-link-title^="Researching"] .rm-page-ref,
+span[data-link-title^="Synthesising"] .rm-page-ref,
+span[data-link-title^="Alive"] .rm-page-ref {
+  color: white;
+  padding: 3px 7px;
+  line-height: 2em;
+  font-weight: 500;
+}
+
+span.rm-page-ref[data-tag="Livestream"],
+span[data-link-title^="Livestream"] .rm-page-ref {
+  color: var(--tag-livestream);
+  padding: 3px 4px;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+/* Link Title Prefix Styles (hierarchy notation) */
+span[data-link-title^="Book/"] .rm-page-ref,
+span[data-link-title^="Article/"] .rm-page-ref,
+span[data-link-title^="Video/"] .rm-page-ref {
+  color: var(--tag-book);
+  font-weight: 600;
+}
+
+span[data-link-title^="Evergreen/"] .rm-page-ref {
+  color: var(--tag-evergreen-page);
+  font-weight: 600;
+}
+
+span[data-link-title^="➽"] .rm-page-ref {
+  color: var(--tag-arrow);
+  font-weight: 700;
+}
+
+span[data-link-title^="Project/"] .rm-page-ref {
+  color: var(--tag-project);
+  font-weight: 700;
+}
+
+span[data-link-title^="Area/"] .rm-page-ref {
+  color: var(--tag-area);
+  font-weight: 600;
+}
+
+span[data-link-title^="Course/"] .rm-page-ref {
+  color: var(--tag-course);
+  font-weight: 600;
+}
+
+span[data-link-title^="Idea/"] .rm-page-ref {
+  color: var(--tag-idea);
+  padding: 3px 4px;
+  font-weight: 700;
+  line-height: 1.4em;
+}
+span[data-link-title^="Idea/"] .rm-page-ref::before {
+  content:"✦ ";
+}
+
+
+/* -------------------------- */
+
+/* Block Styles by Tag */
+
+/* -------------------------- */
+
+
+/* Block Container Styles (unified structure) */
+.roam-block-container[data-page-links*='Claim'],
+.roam-block-container[data-page-links*='Questions'],
+.roam-block-container[data-page-links*='Response'],
+.roam-block-container[data-page-links*='Evidence'],
+.roam-block-container[data-page-links*='DirectQuote'] {
+  border-radius: 6px;
+  padding: 0.6em 0.4em 0.4em 0em;
+  margin-top: 2px;
+}
+
+.roam-block-container[data-page-links*='Claim'] { background: var(--block-claim-bg); }
+.roam-block-container[data-page-links*='Questions'] { background: var(--block-questions-bg); }
+.roam-block-container[data-page-links*='Response'] { background: var(--block-response-bg); }
+.roam-block-container[data-page-links*='Evidence'] { background: var(--block-evidence-bg); }
+.roam-block-container[data-page-links*='DirectQuote'] { background: var(--block-directquote-bg); }
+
+/* Block Tag Annotation Colors */
+span.rm-page-ref[data-tag="Claim"],
+span[data-link-title^="Claim"] .rm-page-ref,
+span.rm-page-ref[data-tag="Questions"],
+span[data-link-title^="Questions"] .rm-page-ref,
+span.rm-page-ref[data-tag="Response"],
+span[data-link-title^="Response"] .rm-page-ref,
+span.rm-page-ref[data-tag="Evidence"],
+span[data-link-title^="Evidence"] .rm-page-ref,
+span.rm-page-ref[data-tag="DirectQuote"],
+span[data-link-title^="DirectQuote"] .rm-page-ref {
+  opacity: 70%;
+  font-size: 80%;
+}
+
+span.rm-page-ref[data-tag="Claim"],
+span[data-link-title^="Claim"] .rm-page-ref { color: var(--tag-claim-color); }
+
+span.rm-page-ref[data-tag="Questions"],
+span[data-link-title^="Questions"] .rm-page-ref { color: var(--tag-questions-color); }
+
+span.rm-page-ref[data-tag="Response"],
+span[data-link-title^="Response"] .rm-page-ref { color: var(--tag-response-color); }
+
+span.rm-page-ref[data-tag="Evidence"],
+span[data-link-title^="Evidence"] .rm-page-ref { color: var(--tag-evidence-color); }
+
+span.rm-page-ref[data-tag="DirectQuote"],
+span[data-link-title^="DirectQuote"] .rm-page-ref { color: var(--tag-directquote-color); }
+
+.roam-sidebar-container .rm-db-title-container .rm-db-title {
+  color:  #DE2A18;
+  padding: 4px;
+  font-size: large;
+  font-family: "Felix Titling", "方正清刻本悦宋简体";
+}
+
+/* Sticky Headers (refactored to reduce duplication) */
+.rm-heading-level-1 > .rm-block-main.rm-block__self:first-child,
+.rm-heading-level-2 > .rm-block-main.rm-block__self:first-child,
+.rm-heading-level-3 > .rm-block-main.rm-block__self:first-child {
+  background-color: transparent !important;
+  background-clip: padding-box !important;
+  position: sticky !important;
+  z-index: 18 !important;
+  top: -1px !important;
+  opacity: 1 !important;
+}
+
+.rm-bq {
+    background-color: transparent;
+    border-radius: 15px;
+    border-left: none;
+    opacity: 75%;
+    font-size: 14px;
+    font-family: "汉仪空山楷";
+    color: #000000;
+    margin: 0 0 10px;
+    word-wrap: break-word; 
+}
+
+.rm-bullet__inner--user-icon {
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-clip: content-box;
+    border: 4px solid transparent;
+    background-color: #000000;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page{
+  color:#000000
+}
+div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span{
+  color: #ED5A65;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button{
+  color:#000000
+}
+
+.rm-settings .rm-settings-panel .rm-settings-panel__description {
+    color: #f8f8f8;
+}
+
+.rm-settings .rm-settings-panel__section h1 {
+  color: #E3EFD1 !important;
+}
+
+.rm-settings .rm-settings-panel__section h2 {
+  color: #E3EFD1 !important;
+}
+
+
+.rm-settings .rm-settings-panel h3{
+  color: #E3EFD1 !important;
+}
+
+.rm-settings .rm-settings-panel__section h4 {
+  color: #E3EFD1 !important;
+}
+
+.rm-settings .rm-settings-panel__section h5 {
+  color: #E3EFD1 !important;
+}
+
+.rm-settings .rm-settings-panel__section h6 {
+  color: #E3EFD1 !important;
+}
+
+.rm-settings input[type="text"]{
+  background-color: #dadada;
+}
+
+h1, h2, h3, h4, h5, h6, .rm-level1, .rm-level2, .rm-level3 .rm-title-editing-display{
+  color: #dadada;
+}
+
+.rm-extensions-installed__header{
+  color:#e3efd1;
+}
+
+.rm-extension-installed__name{
+  color:#e3efd1;
+}
+
+.rm-extensions-marketplace .rm-extensions-marketplace-search{
+  background-color:var(--bg-color);
+}
+
+.rm-extensions-marketplace .rm-extensions-marketplace-details{
+  background-color:var(--bg-color);
+}
+.rm-extensions-marketplace .rm-extensions-marketplace-search__settings input{
+  background-color:#dadada;
+}
+
+.rm-settings-panel__panel-config{
+  background-color:#00acc0;
+}
+
+.rm-reference-item {
+    margin-top: 8px;
+    border-radius: 15px;
+    border: none;
+    margin-right: 8px;
+    flex: 1 1 100%;
+    word-break: break-word;
+    background-color: #ffffff;
+    padding: 0px;
+}
+
+/* Inline-style override: 覆盖 DevTools 中显示的 "color: rgb(206, 217, 224)"（Linked References 标题）
+   Scoped under .rm-reference-wrapper 以减少对其他元素的影响 */
+.rm-reference-wrapper div[style*="color: rgb(206, 217, 224)"] {
+  color: #144A74!important;
+}
+
+.rm-settings .rm-settings-panel .rm-select-wrapper {
+  color: #f8f8f8;
+}
