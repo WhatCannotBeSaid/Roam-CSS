@@ -1,51 +1,50 @@
 :root {
-    --header-font:"Calligraph421 BT", "方正颜真卿楷书 简";
+    --header-font:"Futura", "方正颜真卿楷书 简";
     --body-font:"Palatino Linotype", "方正屏显雅宋_GBK";
-    --code-font:"Optima","方正屏显雅宋_GBK";
-    --font-size: 15px;
-    --bg-color: #D1E2DE;
-    --page-color: #B9DEC9;
-    --text-color: #3f4758;
-    --light-text-color: #7086A9;
-    --page-tag-color: #EE2C79;
-    --color-primary: #ec6f35;
-    --color-primary-light: #ff913c;
-    --color-primary-highlight: #fcc1786d;
-    --color-secondary: #7056F2;
-    --color-subtle-border: #e8dddb;
-    /* Tag Color Palette */
-    --tag-tweet: #81d5ed;
-    --tag-literature: #9769ff;
-    --tag-evergreens: #0dbac6;
-    --tag-seedling: #0dbac6;
-    --tag-idea-bank: #fcb815;
-    --tag-illustrated: #7172fc;
-    --tag-garden: #9dbc13;
-    --tag-video-tutorial: #db3b8d;
-    --tag-essay: #adcb2a;
-    --tag-livestream: #b979cf;
-    --tag-talk: #7172fc;
-    --tag-waiting: #f9c866;
-    --tag-researching: #ff9d66;
-    --tag-synthesising: #fc766f;
-    --tag-alive: #ee5f85;
-    --tag-book: #119bf0;
-    --tag-evergreen-page: #00acc0;
-    --tag-arrow: #35b2d4;
-    --tag-project: #5135d4;
-    --tag-area: #d4357f;
-    --tag-course: #5391f8;
-    --tag-idea: #fcb815;
-    --tag-claim-color: #FFC585;
-    --tag-questions-color: #91B9E5;
-    --tag-response-color: #AFA0E1;
-    --tag-evidence-color: #F99292;
-    --tag-directquote-color: #A5C16A;
-    --block-claim-bg: #FDF8EE;
-    --block-questions-bg: #ECF5FB;
-    --block-response-bg: #F3F1FD;
-    --block-evidence-bg: #FEEDED;
-    --block-directquote-bg: #F4F6D8;
+    --code-font:"Fira Code","方正屏显雅宋_GBK";
+    --bg-color: #D1E2DE; /* Not Changed */
+    --page-color: #B9DEC9; /* Not Changed */
+    --text-color: #3d3b4f; /* 玄 */
+    --light-text-color: #798281; /* 苍 */
+    --page-tag-color: #b292a4; /* 香芋 */
+    --color-primary: #589b97; /* 窃蓝 */
+    --color-primary-light: #88ada6; /* 水色 */
+    --color-primary-highlight: #f0e8e9; /* 极淡的藕色 */
+    --color-secondary: #5a74c2; /* 景泰蓝 */
+    --color-subtle-border: #dce9e8; /* 介于月白和背景色之间 */
+    /* Tag Color Palette - Elegant & Light Theme */
+    --tag-tweet: #89c3eb; /* 苍蓝 */
+    --tag-literature: #b292a4; /* 香芋 */
+    --tag-evergreens: #589b97; /* 窃蓝 */
+    --tag-seedling: #88ada6; /* 水色 */
+    --tag-idea-bank: #f9ac90; /* 初桃 */
+    --tag-illustrated: #5a74c2; /* 景泰蓝 */
+    --tag-garden: #a0a775; /* 松霜 */
+    --tag-video-tutorial: #e4a6a8; /* 舌红 */
+    --tag-essay: #788a54; /* 艾背绿 */
+    --tag-livestream: #d292a0; /* 玉色 */
+    --tag-talk: #5a74c2; /* 景泰蓝 */
+    --tag-waiting: #ccccd6; /* 远山紫 */
+    --tag-researching: #89c3eb; /* 苍蓝 */
+    --tag-synthesising: #b292a4; /* 香芋 */
+    --tag-alive: #e4a6a8; /* 舌红 */
+    --tag-book: #5a74c2; /* 景泰蓝 */
+    --tag-evergreen-page: #589b97; /* 窃蓝 */
+    --tag-arrow: #88ada6; /* 水色 */
+    --tag-project: #525288; /* 瑾瑜 */
+    --tag-area: #788a54; /* 艾背绿 */
+    --tag-course: #5a74c2; /* 景泰蓝 */
+    --tag-idea: #f9ac90; /* 初桃 */
+    --tag-claim-color: #e4a6a8; /* 舌红 */
+    --tag-questions-color: #89c3eb; /* 苍蓝 */
+    --tag-response-color: #b292a4; /* 香芋 */
+    --tag-evidence-color: #525288; /* 瑾瑜 */
+    --tag-directquote-color: #788a54; /* 艾背绿 */
+    --block-claim-bg: #fcf4f4;
+    --block-questions-bg: #f0f8fc;
+    --block-response-bg: #f6f3f5;
+    --block-evidence-bg: #e9e9f0;
+    --block-directquote-bg: #f1f2ed;
 }
 
 /* Body Colours */
@@ -83,17 +82,23 @@ body, #app {
 }
 
 .block-highlight-blue {
-background-color: var(--color-primary-highlight) !important;
-z-index: 99;
+  background-color: transparent !important;
+  z-index: 99;
+}
+.block-highlight-blue * {
+  color: var(--color-primary) !important;
 }
 
 div::selection, textarea::selection {
-background-color: var(--color-primary-highlight);
+  background-color: transparent;
+  color: var(--color-primary);
+  text-shadow: 0 0 2px var(--color-primary-light);
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6, .rm-level1, .rm-level2, .rm-level3 .rm-title-editing-display {
   font-family: var(--header-font);
+  color: black;
 }
 .rm-title-editing-display textarea {
   font-family: var(--header-font);
@@ -130,13 +135,40 @@ div, textarea {
 }
 
 /* Code Syntax */
+/* 强制覆盖大型代码块及行内代码的所有子元素 */
+.rm-code-block .cm-editor,
+.rm-code-block .cm-content,
+.rm-code-block .cm-line,
+.rm-code-block .cm-gutters,
+.rm-inline-code,
 code {
-  font-family: var(--code-font);
-  background: #F0F4F8;
-  color: var(--text-color);
+  font-family: var(--code-font)!important;
+  background: #ffffff;
+  color: #000000;
   border: none;
   padding: 4px 6px;
   opacity: 90%;
+}
+/* 1. 针对大型代码块 (CodeMirror) 的选中颜色 */
+.cm-selectionBackground,
+.cm-focused .cm-selectionBackground,
+.cm-content ::selection {
+    background-color: #801DAE !important; /* 这里修改为你喜欢的颜色，例如深绿色 */
+    color: rgb(0, 0, 0) !important;               /* 选中时的文字颜色 */
+}
+
+/* 2. 针对行内代码 (Inline Code) 的选中颜色 */
+code::selection {
+    background-color: #801DAE !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+/* 使 CodeMirror 选中背景更圆润，更像椭圆形 */
+.cm-selectionBackground {
+    border-radius: 10px !important;
+    /* 利用阴影扩张背景，使其看起来更像椭圆 */
+    box-shadow: 0 0 0 2px #3eaf7c !important; 
+    background-color: #3eaf7c !important;
 }
 
 /* Queries */
@@ -298,19 +330,19 @@ box-sizing: content-box;
   color: #142334;
   font-size: 1.8rem;
   font-weight: 600;
-  font-family: "Palatino nova Pro Titling" ,"方正清刻本悦宋简体";
+  font-family: "Palatino Linotype" ,"方正清刻本悦宋简体";
 }
 .rm-level2, .rm-heading-level-2>.rm-block__self .rm-block__input {
   color: #395260;
   font-size: 1.6rem;
   font-weight: 500;
-  font-family: "Palatino nova Pro Titling", "方正清刻本悦宋简体" !important;
+  font-family: "Palatino Linotype", "方正清刻本悦宋简体" !important;
 }
 .rm-level3, .rm-heading-level-3>.rm-block__self .rm-block__input {
   color:  #404A57;
   font-weight: 400;
   font-size: 1.4rem;
-  font-family: "Palatino nova Pro Titling" ,"方正清刻本悦宋简体";
+  font-family: "Palatino Linotype" ,"方正清刻本悦宋简体";
 }
 
 a {
@@ -367,7 +399,6 @@ span.rm-page-ref.rm-page-ref--tag {
   padding: 2px 8px;
   border-radius: 15px; /* 椭圆 */
   background: #FF3300;
-  color: #fefefe;
   line-height: 1.6;
   font-weight: 600;
 }
@@ -381,13 +412,18 @@ span.rm-page-ref[data-tag] {
   line-height: 0;
 }
 span.rm-page-ref[data-tag]::after {
-  content: attr(data-tag);
-  display: inline-block;
-  font-size: var(--font-size); /* 恢复为页面字体大小 */
-  line-height: 1.6;
-  color: #fefefe; /* 继承由更具体选择器（按 data-tag）设置的颜色 */
-  font-weight: inherit;
+    content: attr(data-tag);
+    display: inline-block;
+    font-size: 14px; /* 或者使用 1rem，给它一个明确的大小 */
+    line-height: 1.6;
+    color: #fefefe; 
+    font-weight: inherit;
 }
+/* 为通用标签 ::after 伪元素明确设置颜色 */
+span.rm-page-ref.rm-page-ref--tag[data-tag]::after {
+    color: #fefefe;
+}
+
 /* 恢复内部子元素（比如 popover 按钮/图标）的字体尺寸，保持交互可用 */
 span.rm-page-ref[data-tag] span,
 span.rm-page-ref[data-tag] .bp3-popover-wrapper,
@@ -409,30 +445,48 @@ span.rm-page-ref[data-tag] .bp3-popover-target {
 
 /* -------------------------- */
 
-/* Custom Data Tags and Pages */
+/* /* Custom Data Tags and Pages */
 
 /* -------------------------- */
 /* Filled Tag Styles (with background) */
-span.rm-page-ref[data-tag="Tweet"] {
-  background: var(--tag-tweet);
-}
-span.rm-page-ref[data-tag="Literature Notes"] {
-  background: var(--tag-literature);
-}
-span.rm-page-ref[data-tag="Evergreens"] {
-  background: var(--tag-evergreens);
-}
+/* Shared styles for tags with background */
 span.rm-page-ref[data-tag="Tweet"],
 span.rm-page-ref[data-tag="Literature Notes"],
 span.rm-page-ref[data-tag="Evergreens"],
+span.rm-page-ref[data-tag="Essay"],
+span.rm-page-ref[data-tag="Talk"],
+span.rm-page-ref[data-tag="Waiting"],
+span.rm-page-ref[data-tag="Researching"],
+span.rm-page-ref[data-tag="Synthesising"],
+span.rm-page-ref[data-tag="Alive"],
 span[data-link-title^="Tweet"] .rm-page-ref,
 span[data-link-title^="Literature Notes"] .rm-page-ref,
-span[data-link-title^="Evergreens"] .rm-page-ref {
+span[data-link-title^="Evergreens"] .rm-page-ref,
+span[data-link-title^="Essay"] .rm-page-ref,
+span[data-link-title^="Talk"] .rm-page-ref,
+span[data-link-title^="Waiting"] .rm-page-ref,
+span[data-link-title^="Researching"] .rm-page-ref,
+span[data-link-title^="Synthesising"] .rm-page-ref,
+span[data-link-title^="Alive"] .rm-page-ref {
   color: white;
   padding: 3px 7px;
   line-height: 2em;
   font-weight: 500;
 }
+
+/* Individual background colors */
+span.rm-page-ref[data-tag="Tweet"] { background: var(--tag-tweet); }
+span.rm-page-ref[data-tag="Literature Notes"] { background: var(--tag-literature); }
+span.rm-page-ref[data-tag="Evergreens"] { background: var(--tag-evergreens); }
+span.rm-page-ref[data-tag="Essay"] { background: var(--tag-essay); }
+span.rm-page-ref[data-tag="Talk"] { background: var(--tag-talk); }
+span.rm-page-ref[data-tag="Waiting"] { background: var(--tag-waiting); }
+span.rm-page-ref[data-tag="Researching"] { background: var(--tag-researching); }
+span.rm-page-ref[data-tag="Synthesising"] { background: var(--tag-synthesising); }
+span.rm-page-ref[data-tag="Alive"] { background: var(--tag-alive); }
+
+
+/* Other Tag Styles */
 span.rm-page-ref[data-tag="Seedling"],
 span[data-link-title^="Seedling"] .rm-page-ref {
   color: var(--tag-seedling);
@@ -480,7 +534,6 @@ span.rm-page-ref[data-tag="Video Tutorial"],
 span[data-link-title^="Video Tutorial"] .rm-page-ref {
   color: var(--tag-video-tutorial);
 }
-/* More Filled Tag Styles */
 span.rm-page-ref[data-tag="Essay"] {
   background: var(--tag-essay);
 }
@@ -507,39 +560,40 @@ span.rm-page-ref[data-tag="Synthesising"],
 span.rm-page-ref[data-tag="Alive"],
 span[data-link-title^="Essay"] .rm-page-ref,
 span[data-link-title^="Talk"] .rm-page-ref,
-span[data-link-title^="Waiting"] .rm-page-ref,
-span[data-link-title^="Researching"] .rm-page-ref,
-span[data-link-title^="Synthesising"] .rm-page-ref,
-span[data-link-title^="Alive"] .rm-page-ref {
-  color: white;
-  padding: 3px 7px;
-  line-height: 2em;
-  font-weight: 500;
+/* Link Title Prefix Styles (hierarchy notation) */
+span[data-link-title^="Book/"] .rm-page-ref,
+span[data-link-title^="Article/"] .rm-page-ref,
+span[data-link-title^="Video/"] .rm-page-ref,
+span[data-link-title^="Evergreen/"] .rm-page-ref,
+span[data-link-title^="Area/"] .rm-page-ref,
+span[data-link-title^="Course/"] .rm-page-ref {
+  font-weight: 600;
 }
 
-span.rm-page-ref[data-tag="Livestream"],
-span[data-link-title^="Livestream"] .rm-page-ref {
-  color: var(--tag-livestream);
-  padding: 3px 4px;
-  line-height: 1.4em;
+span[data-link-title^="➽"] .rm-page-ref,
+span[data-link-title^="Project/"] .rm-page-ref {
   font-weight: 700;
 }
-/* Link Title Prefix Styles (hierarchy notation) */
+
 span[data-link-title^="Book/"] .rm-page-ref,
 span[data-link-title^="Article/"] .rm-page-ref,
 span[data-link-title^="Video/"] .rm-page-ref {
   color: var(--tag-book);
-  font-weight: 600;
 }
-
 span[data-link-title^="Evergreen/"] .rm-page-ref {
   color: var(--tag-evergreen-page);
-  font-weight: 600;
 }
-
 span[data-link-title^="➽"] .rm-page-ref {
   color: var(--tag-arrow);
-  font-weight: 700;
+}
+span[data-link-title^="Project/"] .rm-page-ref {
+  color: var(--tag-project);
+}
+span[data-link-title^="Area/"] .rm-page-ref {
+  color: var(--tag-area);
+}
+span[data-link-title^="Course/"] .rm-page-ref {
+  color: var(--tag-course);
 }
 
 span[data-link-title^="Project/"] .rm-page-ref {
@@ -642,15 +696,17 @@ span[data-link-title^="DirectQuote"] .rm-page-ref { color: var(--tag-directquote
 }
 
 .rm-bq {
-    background-color: transparent;
-    border-radius: 15px;
-    border-left: none;
-    opacity: 75%;
-    font-size: 14px;
+    background-color: var(--color-primary-highlight);
+    border-left: 2px solid var(--color-primary);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 8px 0;
     font-family: "汉仪空山楷";
-    color: #000000;
-    margin: 0 0 10px;
-    word-wrap: break-word; 
+    font-size: 0.95em;
+    color: var(--text-color);
+    text-align: left;
+    word-wrap: break-word;
+    opacity: 0.9;
 }
 
 .rm-bullet__inner--user-icon {
@@ -710,9 +766,7 @@ div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span{
   background-color: #dadada;
 }
 
-h1, h2, h3, h4, h5, h6, .rm-level1, .rm-level2, .rm-level3 .rm-title-editing-display{
-  color: black;
-}
+
 
 .rm-extensions-installed__header{
   color:#e3efd1;
@@ -761,3 +815,357 @@ h1, h2, h3, h4, h5, h6, .rm-level1, .rm-level2, .rm-level3 .rm-title-editing-dis
 .rm-settings .rm-settings-panel .rm-select-wrapper {
   color: #f8f8f8;
 }
+
+#block-input-ghost span {
+  color: black !important;
+}
+
+div > .bp3-icon-caret-down + strong,
+div > .bp3-icon-caret-right + strong {
+    color: rgba(28, 172, 225, 0.826) !important;
+}
+
+/* -------------------------- */
+/* Custom Highlights          */
+/* -------------------------- */
+span.rm-highlight {
+    text-decoration: none !important;
+    background: linear-gradient(180deg, rgba(255, 199, 115, 0) 60%, #B0A4E3 60%);
+}
+
+/* Hide specific tags */
+span.rm-page-ref[data-tag="h/yellow"],
+span.rm-page-ref[data-tag="h/blue"],
+span.rm-page-ref[data-tag="h/red"],
+span.rm-page-ref[data-tag="h/green"],
+span.rm-page-ref[data-tag="h/purple"],
+span.rm-page-ref[data-tag="h/orange"] {
+  display: none;
+}
+
+/* -------------------------- */
+/* Dark Mode Styles (Revised) */
+/* -------------------------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Base Colors - Elegant Dark Palette */
+        --bg-color: #1a1a1a;              /* 月影黑 - Near-black background */
+        --page-color: #232323;            /* 暗夜灰 - Charcoal for content areas */
+        --text-color: #e0e0e0;            /* 霜白 - Soft white text */
+        --light-text-color: #888888;      /* 远山灰 - Medium grey for secondary text */
+        --page-tag-color: #c678dd;        /* 初荷 - Muted purple for tags */
+        --color-primary: #61afef;          /* 天青 - Calm blue for primary actions */
+        --color-primary-light: #82c0ff;   /* Lighter 天青 */
+        --color-primary-highlight: #2a2a2a; /* Subtle highlight */
+        --color-secondary: #c678dd;       /* 初荷 - Muted purple for links */
+        --color-subtle-border: #3a3a3a;    /* 铁灰 - Subtle border */
+
+        /* Tag Color Palette - Dark Mode */
+        --tag-tweet: #61afef;             /* 天青 */
+        --tag-literature: #c678dd;        /* 初荷 */
+        --tag-evergreens: #98c379;        /* 艾背绿 */
+        --tag-seedling: #56b6c2;          /* 碧山 */
+        --tag-idea-bank: #e5c07b;         /* 杏黄 */
+        --tag-illustrated: #61afef;       /* 天青 */
+        --tag-garden: #98c379;            /* 艾背绿 */
+        --tag-video-tutorial: #e06c75;    /* 舌红 */
+        --tag-essay: #98c379;             /* 艾背绿 */
+        --tag-livestream: #e06c75;        /* 舌红 */
+        --tag-talk: #61afef;              /* 天青 */
+        --tag-waiting: #888888;           /* 远山灰 */
+        --tag-researching: #61afef;        /* 天青 */
+        --tag-synthesising: #c678dd;      /* 初荷 */
+        --tag-alive: #e06c75;             /* 舌红 */
+        --tag-book: #61afef;              /* 天青 */
+        --tag-evergreen-page: #98c379;    /* 艾背绿 */
+        --tag-arrow: #56b6c2;             /* 碧山 */
+        --tag-project: #c678dd;           /* 初荷 */
+        --tag-area: #98c379;              /* 艾背绿 */
+        --tag-course: #61afef;            /* 天青 */
+        --tag-idea: #e5c07b;              /* 杏黄 */
+
+        /* Block Specific Colors */
+        --tag-claim-color: #e06c75;       /* 舌红 */
+        --tag-questions-color: #61afef;   /* 天青 */
+        --tag-response-color: #c678dd;     /* 初荷 */
+        --tag-evidence-color: #e5c07b;     /* 杏黄 */
+        --tag-directquote-color: #98c379;  /* 艾背绿 */
+        --block-claim-bg: rgba(224, 108, 117, 0.1);
+        --block-questions-bg: rgba(97, 175, 239, 0.1);
+        --block-response-bg: rgba(198, 120, 221, 0.1);
+        --block-evidence-bg: rgba(229, 192, 123, 0.1);
+        --block-directquote-bg: rgba(152, 195, 121, 0.1);
+    }
+}
+
+/* --- Custom Night Mode Override for bp3-dark --- */
+body.bp3-dark {
+    /* Apply the new palette */
+    --bg-color: #1a1a1a;
+    --page-color: #232323;
+    --text-color: #e0e0e0;
+    --light-text-color: #888888;
+    --page-tag-color: #c678dd;
+    --color-primary: #61afef;
+    --color-primary-light: #82c0ff;
+    --color-primary-highlight: #2a2a2a;
+    --color-secondary: #c678dd;
+    --color-subtle-border: #3a3a3a;
+    --tag-tweet: #61afef;
+    --tag-literature: #c678dd;
+    --tag-evergreens: #98c379;
+    --tag-seedling: #56b6c2;
+    --tag-idea-bank: #e5c07b;
+    --tag-illustrated: #61afef;
+    --tag-garden: #98c379;
+    --tag-video-tutorial: #e06c75;
+    --tag-essay: #98c379;
+    --tag-livestream: #e06c75;
+    --tag-talk: #61afef;
+    --tag-waiting: #888888;
+    --tag-researching: #61afef;
+    --tag-synthesising: #c678dd;
+    --tag-alive: #e06c75;
+    --tag-book: #61afef;
+    --tag-evergreen-page: #98c379;
+    --tag-arrow: #56b6c2;
+    --tag-project: #c678dd;
+    --tag-area: #98c379;
+    --tag-course: #61afef;
+    --tag-idea: #e5c07b;
+    --tag-claim-color: #e06c75;
+    --tag-questions-color: #61afef;
+    --tag-response-color: #c678dd;
+    --tag-evidence-color: #e5c07b;
+    --tag-directquote-color: #98c379;
+    --block-claim-bg: rgba(224, 108, 117, 0.1);
+    --block-questions-bg: rgba(97, 175, 239, 0.1);
+    --block-response-bg: rgba(198, 120, 221, 0.1);
+    --block-evidence-bg: rgba(229, 192, 123, 0.1);
+    --block-directquote-bg: rgba(152, 195, 121, 0.1);
+
+    /* Custom Highlight Colors */
+    --highlight-yellow: #FFB61E; /* 藤黄 */
+    --highlight-green: #61AC85; /* 庭芜绿 */
+    --highlight-blue: #83C3F7; /* 沧浪 */
+    --highlight-red: #F08383; /* 合欢红 */
+    --highlight-purple: #BD84C8; /* 紫藤 */
+    --highlight-orange: #FBC85F; /* 杏黄 */
+}
+
+/* General Overrides for Dark Theme */
+body.bp3-dark, body.bp3-dark #app {
+    background: var(--bg-color) !important;
+}
+
+body.bp3-dark .roam-article > div {
+    background: var(--page-color);
+    border-color: var(--color-subtle-border);
+}
+
+/* Custom Highlights - Dark Mode */
+body.bp3-dark span.rm-highlight {
+    color: #EEDEB0 !important;
+    background: linear-gradient(180deg, transparent 60%, #15559A 60%);
+}
+body.bp3-dark .roam-block-container[data-page-links*='h/yellow'] span.rm-highlight {
+    background: linear-gradient(180deg, transparent 60%, var(--highlight-yellow) 60%);
+}
+body.bp3-dark .roam-block-container[data-page-links*='h/green'] span.rm-highlight {
+    background: linear-gradient(180deg, transparent 60%, var(--highlight-green) 60%);
+}
+body.bp3-dark .roam-block-container[data-page-links*='h/blue'] span.rm-highlight {
+    background: linear-gradient(180deg, transparent 60%, var(--highlight-blue) 60%);
+}
+body.bp3-dark .roam-block-container[data-page-links*='h/red'] span.rm-highlight {
+    background: linear-gradient(180deg, transparent 60%, var(--highlight-red) 60%);
+}
+body.bp3-dark .roam-block-container[data-page-links*='h/purple'] span.rm-highlight {
+    background: linear-gradient(180deg, transparent 60%, var(--highlight-purple) 60%);
+}
+body.bp3-dark .roam-block-container[data-page-links*='h/orange'] span.rm-highlight {
+    background: linear-gradient(180deg, transparent 60%, var(--highlight-orange) 60%);
+}
+
+body.bp3-dark h1,
+body.bp3-dark h2,
+body.bp3-dark h3,
+body.bp3-dark h4,
+body.bp3-dark h5,
+body.bp3-dark h6,
+body.bp3-dark .rm-level1,
+body.bp3-dark .rm-heading-level-1>.rm-block__self .rm-block__input,
+body.bp3-dark .rm-level2,
+body.bp3-dark .rm-heading-level-2>.rm-block__self .rm-block__input,
+body.bp3-dark .rm-level3,
+body.bp3-dark .rm-heading-level-3>.rm-block__self .rm-block__input,
+body.bp3-dark .rm-title-editing-display textarea {
+    color: var(--text-color) !important;
+}
+
+body.bp3-dark div, body.bp3-dark textarea {
+    color: var(--text-color);
+}
+
+/* Sidebar */
+body.bp3-dark .roam-body .roam-app .roam-sidebar-container {
+    background-color: var(--bg-color);
+    border-right-color: var(--color-subtle-border);
+}
+
+body.bp3-dark #right-sidebar > div {
+    background-color: var(--bg-color);
+    border-left: 1px solid var(--color-subtle-border);
+}
+
+/* Selected item in sidebar */
+body.bp3-dark .starred-pages .page:hover,
+body.bp3-dark .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover,
+body.bp3-dark .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row:hover {
+    background-color: var(--page-color);
+}
+
+body.bp3-dark .bp3-tree-node.bp3-tree-node-selected > .bp3-tree-node-content {
+    background-color: var(--color-primary) !important;
+    color: white !important;
+}
+
+body.bp3-dark .starred-pages .page .active,
+body.bp3-dark .bp3-text-overflow-ellipsis > a.bp3-active {
+    background-color: var(--color-primary-highlight) !important;
+}
+
+
+/* Code Blocks */
+body.bp3-dark .rm-code-block .cm-editor,
+body.bp3-dark .rm-code-block .cm-content,
+body.bp3-dark .rm-code-block .cm-line,
+body.bp3-dark .rm-code-block .cm-gutters,
+body.bp3-dark .rm-inline-code,
+body.bp3-dark code {
+    background: #282a36; /* Using a common code bg color */
+    color: var(--text-color);
+}
+
+/* Other elements */
+body.bp3-dark .rm-embed-container,
+body.bp3-dark .rm-reference-item {
+    background-color: var(--bg-color);
+    border-color: var(--color-subtle-border);
+}
+
+body.bp3-dark #block-input,
+body.bp3-dark .roam-body #block-input > span > div {
+    background: var(--page-color);
+}
+
+body.bp3-dark .kanban-board {
+    background-color: var(--bg-color);
+}
+
+body.bp3-dark .kanban-column {
+    background-color: var(--page-color);
+}
+body.bp3-dark .kanban-card {
+    background-color: var(--bg-color);
+    box-shadow: 0px 1px 2px #111;
+}
+
+body.bp3-dark span.rm-page-ref.rm-page-ref--tag {
+    background: transparent;
+    border: 1px solid var(--page-tag-color);
+    padding: 1px 7px;
+}
+
+body.bp3-dark span.rm-page-ref[data-tag]::after {
+    content: attr(data-tag);
+    display: inline-block;
+    font-size: 14px; /* 或者使用 1rem，给它一个明确的大小 */
+    line-height: 1.6;
+    color: #fefefe; 
+    font-weight: inherit;
+}
+
+/* Stroked styles for other specific tags */
+body.bp3-dark span.rm-page-ref[data-tag="Tweet"],
+body.bp3-dark span.rm-page-ref[data-tag="Literature Notes"],
+body.bp3-dark span.rm-page-ref[data-tag="Evergreens"],
+body.bp3-dark span.rm-page-ref[data-tag="Essay"],
+body.bp3-dark span.rm-page-ref[data-tag="Talk"],
+body.bp3-dark span.rm-page-ref[data-tag="Waiting"],
+body.bp3-dark span.rm-page-ref[data-tag="Researching"],
+body.bp3-dark span.rm-page-ref[data-tag="Synthesising"],
+body.bp3-dark span.rm-page-ref[data-tag="Alive"] {
+    background: transparent !important;
+    border-width: 1px;
+    border-style: solid;
+    padding: 1px 7px;
+    line-height: 1.6;
+}
+
+body.bp3-dark span.rm-page-ref[data-tag="Tweet"]::after,
+body.bp3-dark span.rm-page-ref[data-tag="Tweet"] {
+    color: var(--tag-tweet);
+    border-color: var(--tag-tweet);
+}
+
+body.bp3-dark span.rm-page-ref[data-tag="Literature Notes"]::after,
+body.bp3-dark span.rm-page-ref[data-tag="Literature Notes"] {
+    color: var(--tag-literature);
+    border-color: var(--tag-literature);
+}
+
+body.bp3-dark span.rm-page-ref[data-tag="Evergreens"]::after,
+body.bp3-dark span.rm-page-ref[data-tag="Evergreens"] {
+    color: var(--tag-evergreens);
+    border-color: var(--tag-evergreens);
+}
+
+body.bp3-dark span.rm-page-ref[data-tag="Essay"]::after,
+body.bp3-dark span.rm-page-ref[data-tag="Essay"] {
+    color: var(--tag-essay);
+    border-color: var(--tag-essay);
+}
+
+body.bp3-dark span.rm-page-ref[data-tag="Talk"]::after,
+body.bp3-dark span.rm-page-ref[data-tag="Talk"] {
+    color: var(--tag-talk);
+    border-color: var(--tag-talk);
+}
+
+body.bp3-dark span.rm-page-ref[data-tag="Waiting"]::after,
+body.bp3-dark span.rm-page-ref[data-tag="Waiting"] {
+    color: var(--tag-waiting);
+    border-color: var(--tag-waiting);
+}
+
+body.bp3-dark span.rm-page-ref[data-tag="Researching"]::after,
+body.bp3-dark span.rm-page-ref[data-tag="Researching"] {
+    color: var(--tag-researching);
+    border-color: var(--tag-researching);
+}
+
+body.bp3-dark span.rm-page-ref[data-tag="Synthesising"]::after,
+body.bp3-dark span.rm-page-ref[data-tag="Synthesising"] {
+    color: var(--tag-synthesising);
+    border-color: var(--tag-synthesising);
+}
+
+body.bp3-dark span.rm-page-ref[data-tag="Alive"]::after,
+body.bp3-dark span.rm-page-ref[data-tag="Alive"] {
+    color: var(--tag-alive);
+    border-color: var(--tag-alive);
+}
+
+body.bp3-dark a {
+    color: var(--color-secondary);
+}
+
+body.bp3-dark .rm-bullet .rm-bullet__inner {
+    background-color: var(--light-text-color);
+}
+
+body.bp3-dark .rm-bullet.rm-bullet--closed .rm-bullet__inner {
+  border: 4px solid var(--light-text-color);
+}
+/* --- End of Custom Night Mode --- */
