@@ -2,16 +2,16 @@
     --header-font:"Futura", "方正颜真卿楷书 简";
     --body-font:"Palatino Linotype", "方正屏显雅宋_GBK";
     --code-font:"Fira Code","方正屏显雅宋_GBK";
-    --bg-color: #D1E2DE; /* Not Changed */
-    --page-color: #B9DEC9; /* Not Changed */
-    --text-color: #3d3b4f; /* 玄 */
-    --light-text-color: #798281; /* 苍 */
-    --page-tag-color: #b292a4; /* 香芋 */
-    --color-primary: #589b97; /* 窃蓝 */
-    --color-primary-light: #88ada6; /* 水色 */
-    --color-primary-highlight: #f0e8e9; /* 极淡的藕色 */
-    --color-secondary: #5a74c2; /* 景泰蓝 */
-    --color-subtle-border: #dce9e8; /* 介于月白和背景色之间 */
+    --bg-color: #F8F9FA; /* 纸白 */
+    --page-color: #FFFFFF; /* 纯白 */
+    --text-color: #343A40; /* 墨灰 */
+    --light-text-color: #586068; /* 铅灰 - Enhanced contrast */
+    --page-tag-color: #9A8C98; /* 藕荷 */
+    --color-primary: #4A90E2; /* 天青 */
+    --color-primary-light: #A8D8FF; /* 蔚蓝 */
+    --color-primary-highlight: #FDF4E3; /* 杏仁黄 */
+    --color-secondary: #E6A868; /* 秋香 */
+    --color-subtle-border: #E9ECEF; /* 银白 */
     /* Tag Color Palette - Elegant & Light Theme */
     --tag-tweet: #89c3eb; /* 苍蓝 */
     --tag-literature: #b292a4; /* 香芋 */
@@ -59,7 +59,7 @@ body, #app {
   padding: 30px 30px 30px 30px;
   background: var(--page-color);
   box-shadow: var(--page-shadow);
-  border: 1px solid #B9DEC9;
+  border: 1px solid var(--color-subtle-border);
   border-radius: 6px;
   margin-top: 10px !important;
   width: auto;
@@ -98,7 +98,7 @@ div::selection, textarea::selection {
 /* Typography */
 h1, h2, h3, h4, h5, h6, .rm-level1, .rm-level2, .rm-level3 .rm-title-editing-display {
   font-family: var(--header-font);
-  color: black;
+  color: var(--text-color);
 }
 .rm-title-editing-display textarea {
   font-family: var(--header-font);
@@ -239,8 +239,8 @@ box-sizing: content-box;
   align-items: center;
   overflow: hidden;
   border-radius: 50%;
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   background-clip: content-box;
   border: 4px solid transparent;
   background-color: #E3ECF2;
@@ -353,16 +353,16 @@ font-weight: 600;
   display: none;
 }
 .roam-body .roam-app .roam-sidebar-container {
-  background-color: white;
-  border-right: 1px #eee solid;
+  background-color: var(--page-color);
+  border-right: 1px var(--color-subtle-border) solid;
 }
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page, .roam-body .roam-app .roam-sidebar-container > * {
   opacity: 80%;
   box-shadow: none;
 }
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover, .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover {
-  background: white;
-  color: black;
+  background: var(--page-color);
+  color: var(--text-color);
   opacity: 100%;
 }
 #buffer.tall {
@@ -440,6 +440,27 @@ span.rm-page-ref[data-tag] .bp3-popover-target {
   font-size: 14px;
   font-weight: 600;
   font-optical-sizing: white;
+}
+
+/* Find & Replace hotkey text color */
+.rm-hotkeys-action {
+  color: var(--color-primary);
+}
+
+/* Find & Replace readme text color */
+.rm-settings-panel__section .rm-depot-readme-wrapper h1,
+.rm-settings-panel__section .rm-depot-readme-wrapper h2,
+.rm-settings-panel__section .rm-depot-readme-wrapper h3,
+.rm-settings-panel__section .rm-depot-readme-wrapper p,
+.rm-settings-panel__section .rm-depot-readme-wrapper li,
+.rm-settings-panel__section .rm-depot-readme-wrapper a,
+.rm-settings-panel__section .rm-depot-readme-wrapper strong {
+  color: var(--color-primary);
+}
+
+/* Disabled button text color */
+.bp3-button.bp3-disabled, .bp3-button.bp3-disabled .bp3-button-text {
+    color: white !important;
 }
 
 
@@ -715,8 +736,8 @@ span[data-link-title^="DirectQuote"] .rm-page-ref { color: var(--tag-directquote
     align-items: center;
     overflow: hidden;
     border-radius: 50%;
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     background-clip: content-box;
     border: 4px solid transparent;
     background-color: #000000;
@@ -763,7 +784,7 @@ div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span{
 }
 
 .rm-settings input[type="text"]{
-  background-color: #dadada;
+  background-color: #000000;
 }
 
 
@@ -843,74 +864,34 @@ span.rm-page-ref[data-tag="h/orange"] {
   display: none;
 }
 
+/* --- 智能连接线 (Smart Curved Lines) --- */
+
+/* 1. 隐藏 Roam 默认的垂直灰线 */
+.rm-multibar, .block-border-left {
+  display: none !important;
+  visibility: hidden !important;
+}
+.rm-block-children::before {
+  display: none !important;
+}
+
+
 /* -------------------------- */
 /* Dark Mode Styles (Revised) */
 /* -------------------------- */
-@media (prefers-color-scheme: dark) {
-    :root {
-        /* Base Colors - Elegant Dark Palette */
-        --bg-color: #1a1a1a;              /* 月影黑 - Near-black background */
-        --page-color: #232323;            /* 暗夜灰 - Charcoal for content areas */
-        --text-color: #e0e0e0;            /* 霜白 - Soft white text */
-        --light-text-color: #888888;      /* 远山灰 - Medium grey for secondary text */
-        --page-tag-color: #c678dd;        /* 初荷 - Muted purple for tags */
-        --color-primary: #61afef;          /* 天青 - Calm blue for primary actions */
-        --color-primary-light: #82c0ff;   /* Lighter 天青 */
-        --color-primary-highlight: #2a2a2a; /* Subtle highlight */
-        --color-secondary: #c678dd;       /* 初荷 - Muted purple for links */
-        --color-subtle-border: #3a3a3a;    /* 铁灰 - Subtle border */
-
-        /* Tag Color Palette - Dark Mode */
-        --tag-tweet: #61afef;             /* 天青 */
-        --tag-literature: #c678dd;        /* 初荷 */
-        --tag-evergreens: #98c379;        /* 艾背绿 */
-        --tag-seedling: #56b6c2;          /* 碧山 */
-        --tag-idea-bank: #e5c07b;         /* 杏黄 */
-        --tag-illustrated: #61afef;       /* 天青 */
-        --tag-garden: #98c379;            /* 艾背绿 */
-        --tag-video-tutorial: #e06c75;    /* 舌红 */
-        --tag-essay: #98c379;             /* 艾背绿 */
-        --tag-livestream: #e06c75;        /* 舌红 */
-        --tag-talk: #61afef;              /* 天青 */
-        --tag-waiting: #888888;           /* 远山灰 */
-        --tag-researching: #61afef;        /* 天青 */
-        --tag-synthesising: #c678dd;      /* 初荷 */
-        --tag-alive: #e06c75;             /* 舌红 */
-        --tag-book: #61afef;              /* 天青 */
-        --tag-evergreen-page: #98c379;    /* 艾背绿 */
-        --tag-arrow: #56b6c2;             /* 碧山 */
-        --tag-project: #c678dd;           /* 初荷 */
-        --tag-area: #98c379;              /* 艾背绿 */
-        --tag-course: #61afef;            /* 天青 */
-        --tag-idea: #e5c07b;              /* 杏黄 */
-
-        /* Block Specific Colors */
-        --tag-claim-color: #e06c75;       /* 舌红 */
-        --tag-questions-color: #61afef;   /* 天青 */
-        --tag-response-color: #c678dd;     /* 初荷 */
-        --tag-evidence-color: #e5c07b;     /* 杏黄 */
-        --tag-directquote-color: #98c379;  /* 艾背绿 */
-        --block-claim-bg: rgba(224, 108, 117, 0.1);
-        --block-questions-bg: rgba(97, 175, 239, 0.1);
-        --block-response-bg: rgba(198, 120, 221, 0.1);
-        --block-evidence-bg: rgba(229, 192, 123, 0.1);
-        --block-directquote-bg: rgba(152, 195, 121, 0.1);
-    }
-}
-
 /* --- Custom Night Mode Override for bp3-dark --- */
 body.bp3-dark {
     /* Apply the new palette */
-    --bg-color: #1a1a1a;
-    --page-color: #232323;
-    --text-color: #e0e0e0;
-    --light-text-color: #888888;
+    --bg-color: #1C1C1E;
+    --page-color: #2C2C2E;
+    --text-color: #EAEAEB;
+    --light-text-color: #8A8A8E;
     --page-tag-color: #c678dd;
-    --color-primary: #61afef;
+    --color-primary: #61AFEF; /* 天青 - Brighter blue for better visibility */
     --color-primary-light: #82c0ff;
-    --color-primary-highlight: #2a2a2a;
-    --color-secondary: #c678dd;
-    --color-subtle-border: #3a3a3a;
+    --color-primary-highlight: #3A3A3C;
+    --color-secondary: #FFD111; /* 藤黄 - Higher contrast yellow */
+    --color-subtle-border: #3A3A3C;
     --tag-tweet: #61afef;
     --tag-literature: #c678dd;
     --tag-evergreens: #98c379;
@@ -1167,5 +1148,8 @@ body.bp3-dark .rm-bullet .rm-bullet__inner {
 
 body.bp3-dark .rm-bullet.rm-bullet--closed .rm-bullet__inner {
   border: 4px solid var(--light-text-color);
+}
+body.bp3-dark .rm-bullet__inner--user-icon {
+    background-color: var(--tag-seedling);
 }
 /* --- End of Custom Night Mode --- */
