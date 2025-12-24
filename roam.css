@@ -1153,3 +1153,107 @@ body.bp3-dark .rm-bullet__inner--user-icon {
     background-color: var(--tag-seedling);
 }
 /* --- End of Custom Night Mode --- */
+
+/* ========================================================= */
+/* 插件 Todo Progress Bar 优化版 (By Gemini & Copilot)        */
+/* ========================================================= */
+
+/* --- 通用样式 --- */
+/* 内部包装层：强制填满高度 */
+div[style*="width: 150px"][style*="overflow: hidden"] > div {
+    height: 100% !important;
+    width: 100% !important;
+}
+/* 动画层基础尺寸 */
+.wave-animation-v19, .wave-animation-v19-back {
+    height: 60px !important; 
+    width: 200% !important;
+}
+/* 100% 完成时隐藏动画波浪路径 */
+div[style*="width: 150px"] svg.wave-front:not(.wave-animation-v19) path {
+    display: none !important;
+}
+/* 100% 完成时隐藏后景 */
+div[style*="width: 150px"] svg.wave-back:not(.wave-animation-v19-back) {
+    display: none !important;
+}
+
+
+/* --- 日间模式：清爽波浪 (v2 - 优化版) --- */
+/* 1. 外框容器 */
+div[style*="width: 150px"][style*="overflow: hidden"] {
+    height: 16px !important;       
+    border-radius: 9px !important; 
+    background: #eef5f9 !important; /* 更柔和的背景 */
+    border: 1px solid #dbeaf2 !important;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+/* 2. 顶层波浪 (前景) */
+.wave-animation-v19 {
+    top: -28px !important; /* 与夜间模式对齐 */
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 3px white); /* 柔和的白色辉光 */
+}
+.wave-front path {
+    fill: #3498db !important; /* 明亮的天蓝色 */
+}
+
+/* 3. 底层波浪 (后景) */
+.wave-animation-v19-back {
+    top: -25px !important; /* 与夜间模式对齐 */
+    opacity: 0.8 !important;
+    filter: none !important;
+}
+.wave-back path {
+    fill: #2980b9 !important; /* 稍深一点的蓝色 */
+}
+
+/* 4. 100% 完成状态 */
+div[style*="width: 150px"] svg.wave-front:not(.wave-animation-v19) {
+    animation: none !important;
+    transform: none !important;
+    top: 0 !important;
+    height: 120% !important;
+    width: 100% !important;
+    left: 0 !important;
+    background: linear-gradient(180deg, #3498db 0%, #2980b9 100%) !important; /* 蓝色渐变 */
+    opacity: 1 !important;
+}
+
+
+/* --- 夜间模式：火山喷发 (v4 - 提升高度) --- */
+/* 1. 外框容器: 保持炽热感 */
+body.bp3-dark div[style*="width: 150px"][style*="overflow: hidden"] {
+    background: #1a110f !important;
+    border: 1px solid #ff4800 !important;
+    box-shadow: inset 0 0 10px 2px rgba(255, 87, 34, 0.7), 0 0 12px rgba(255, 87, 34, 0.5);
+}
+
+/* 2. 顶层熔岩 (前景): 大幅提升高度 */
+body.bp3-dark .wave-animation-v19 {
+    top: -28px !important; /* 大幅调高，参考日间模式并增强 */
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 6px #ffc107); /* 增强辉光 */
+}
+body.bp3-dark .wave-front path {
+    fill: #FFC107 !important; /* 使用更耀眼的亮黄色 */
+    opacity: 1 !important;
+}
+
+/* 3. 底层熔岩 (后景): 相应提升高度 */
+body.bp3-dark .wave-animation-v19-back {
+    top: -25px !important; /* 保持与顶层的相对位置，整体调高 */
+    opacity: 1 !important;
+    filter: none !important; /* 底层不需要模糊 */
+}
+body.bp3-dark .wave-back path {
+    fill: #E65100 !important; /* 使用更深的暗橙色 */
+    opacity: 1 !important;
+}
+
+/* 4. 100% 完成状态: 填满炽热的熔岩 */
+body.bp3-dark div[style*="width: 150px"] svg.wave-front:not(.wave-animation-v19) {
+    background: linear-gradient(180deg, #FFC107 0%, #FF9800 100%) !important; /* 渐变填充更有质感 */
+    box-shadow: 0 0 12px #FF5722; /* 完成时也发光 */
+}
+
