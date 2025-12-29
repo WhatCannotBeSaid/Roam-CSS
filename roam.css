@@ -1,61 +1,101 @@
 :root {
-    --header-font:"Futura", "方正颜真卿楷书 简";
-    --body-font:"Palatino Linotype", "方正屏显雅宋_GBK";
-    --code-font:"Fira Code","方正屏显雅宋_GBK";
-    --bg-color: #F8F9FA; /* 纸白 */
-    --page-color: #FFFFFF; /* 纯白 */
-    --text-color: #343A40; /* 墨灰 */
-    --light-text-color: #586068; /* 铅灰 - Enhanced contrast */
-    --page-tag-color: #9A8C98; /* 藕荷 */
-    --color-primary: #4A90E2; /* 天青 */
-    --color-primary-light: #A8D8FF; /* 蔚蓝 */
-    --color-primary-highlight: #FDF4E3; /* 杏仁黄 */
-    --color-secondary: #E6A868; /* 秋香 */
-    --color-subtle-border: #E9ECEF; /* 银白 */
-    /* Tag Color Palette - Elegant & Light Theme */
-    --tag-tweet: #89c3eb; /* 苍蓝 */
-    --tag-literature: #b292a4; /* 香芋 */
-    --tag-evergreens: #589b97; /* 窃蓝 */
-    --tag-seedling: #88ada6; /* 水色 */
-    --tag-idea-bank: #f9ac90; /* 初桃 */
-    --tag-illustrated: #5a74c2; /* 景泰蓝 */
-    --tag-garden: #a0a775; /* 松霜 */
-    --tag-video-tutorial: #e4a6a8; /* 舌红 */
-    --tag-essay: #788a54; /* 艾背绿 */
-    --tag-livestream: #d292a0; /* 玉色 */
-    --tag-talk: #5a74c2; /* 景泰蓝 */
-    --tag-waiting: #ccccd6; /* 远山紫 */
-    --tag-researching: #89c3eb; /* 苍蓝 */
-    --tag-synthesising: #b292a4; /* 香芋 */
-    --tag-alive: #e4a6a8; /* 舌红 */
-    --tag-book: #5a74c2; /* 景泰蓝 */
-    --tag-evergreen-page: #589b97; /* 窃蓝 */
-    --tag-arrow: #88ada6; /* 水色 */
-    --tag-project: #525288; /* 瑾瑜 */
-    --tag-area: #788a54; /* 艾背绿 */
-    --tag-course: #5a74c2; /* 景泰蓝 */
-    --tag-idea: #f9ac90; /* 初桃 */
-    --tag-claim-color: #e4a6a8; /* 舌红 */
-    --tag-questions-color: #89c3eb; /* 苍蓝 */
-    --tag-response-color: #b292a4; /* 香芋 */
-    --tag-evidence-color: #525288; /* 瑾瑜 */
-    --tag-directquote-color: #788a54; /* 艾背绿 */
-    --block-claim-bg: #fcf4f4;
-    --block-questions-bg: #f0f8fc;
-    --block-response-bg: #f6f3f5;
-    --block-evidence-bg: #e9e9f0;
-    --block-directquote-bg: #f1f2ed;
+  --header-font: "Futura", "方正颜真卿楷书 简";
+  --body-font: "Optima", "HYKongShanKai", "汉仪空山楷 简", "汉仪空山楷", sans-serif;
+  --code-font: "Fira Code", "方正屏显雅宋_GBK";
+  --bg-color: #F8F9FA;
+  /* 纸白 */
+  --page-color: #FFFFFF;
+  /* 纯白 */
+  --text-color: #343A40;
+  /* 墨灰 */
+  --light-text-color: #586068;
+  /* 铅灰 - Enhanced contrast */
+  --page-tag-color: #9A8C98;
+  /* 藕荷 */
+  --color-primary: #4A90E2;
+  /* 天青 */
+  --color-primary-light: #A8D8FF;
+  /* 蔚蓝 */
+  --color-primary-highlight: #FDF4E3;
+  /* 杏仁黄 */
+  --color-secondary: #E6A868;
+  /* 秋香 */
+  --color-subtle-border: #E9ECEF;
+  /* 银白 */
+  /* Tag Color Palette - Elegant & Light Theme */
+  --tag-tweet: #89c3eb;
+  /* 苍蓝 */
+  --tag-literature: #b292a4;
+  /* 香芋 */
+  --tag-evergreens: #589b97;
+  /* 窃蓝 */
+  --tag-seedling: #88ada6;
+  /* 水色 */
+  --tag-idea-bank: #f9ac90;
+  /* 初桃 */
+  --tag-illustrated: #5a74c2;
+  /* 景泰蓝 */
+  --tag-garden: #a0a775;
+  /* 松霜 */
+  --tag-video-tutorial: #e4a6a8;
+  /* 舌红 */
+  --tag-essay: #788a54;
+  /* 艾背绿 */
+  --tag-livestream: #d292a0;
+  /* 玉色 */
+  --tag-talk: #5a74c2;
+  /* 景泰蓝 */
+  --tag-waiting: #ccccd6;
+  /* 远山紫 */
+  --tag-researching: #89c3eb;
+  /* 苍蓝 */
+  --tag-synthesising: #b292a4;
+  /* 香芋 */
+  --tag-alive: #e4a6a8;
+  /* 舌红 */
+  --tag-book: #5a74c2;
+  /* 景泰蓝 */
+  --tag-evergreen-page: #589b97;
+  /* 窃蓝 */
+  --tag-arrow: #88ada6;
+  /* 水色 */
+  --tag-project: #525288;
+  /* 瑾瑜 */
+  --tag-area: #788a54;
+  /* 艾背绿 */
+  --tag-course: #5a74c2;
+  /* 景泰蓝 */
+  --tag-idea: #f9ac90;
+  /* 初桃 */
+  --tag-claim-color: #e4a6a8;
+  /* 舌红 */
+  --tag-questions-color: #89c3eb;
+  /* 苍蓝 */
+  --tag-response-color: #b292a4;
+  /* 香芋 */
+  --tag-evidence-color: #525288;
+  /* 瑾瑜 */
+  --tag-directquote-color: #788a54;
+  /* 艾背绿 */
+  --block-claim-bg: #fcf4f4;
+  --block-questions-bg: #f0f8fc;
+  --block-response-bg: #f6f3f5;
+  --block-evidence-bg: #e9e9f0;
+  --block-directquote-bg: #f1f2ed;
 }
 
 /* Body Colours */
-body, #app {
+body,
+#app {
   background: var(--bg-color);
 }
+
 .roam-article {
   padding-right: 10px !important;
   padding-left: 0px !important;
 }
-.roam-article > div {
+
+.roam-article>div {
   padding: 30px 30px 30px 30px;
   background: var(--page-color);
   box-shadow: var(--page-shadow);
@@ -64,6 +104,7 @@ body, #app {
   margin-top: 10px !important;
   width: auto;
 }
+
 .roam-body-main {
   top: 0 !important;
   height: 100% !important;
@@ -71,6 +112,7 @@ body, #app {
   position: relative !important;
   padding-left: 0px;
 }
+
 .roam-main {
   width: unset !important;
   max-width: 100% !important;
@@ -85,26 +127,39 @@ body, #app {
   background-color: transparent !important;
   z-index: 99;
 }
+
 .block-highlight-blue * {
   color: var(--color-primary) !important;
 }
 
-div::selection, textarea::selection {
+div::selection,
+textarea::selection {
   background-color: transparent;
   color: var(--color-primary);
   text-shadow: 0 0 2px var(--color-primary-light);
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6, .rm-level1, .rm-level2, .rm-level3 .rm-title-editing-display {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.rm-level1,
+.rm-level2,
+.rm-level3 .rm-title-editing-display {
   font-family: var(--header-font);
   color: var(--text-color);
 }
+
 .rm-title-editing-display textarea {
   font-family: var(--header-font);
   font-size: 1em;
 }
-div, textarea {
+
+div,
+textarea {
   font-family: var(--body-font);
   font-size: var(--font-size);
   color: var(--text-color);
@@ -117,7 +172,7 @@ div, textarea {
   display: inline-block;
   padding: 2px 8px;
   border-radius: 15px;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   line-height: 1.6;
   font-weight: 600;
 }
@@ -130,6 +185,7 @@ div, textarea {
   padding: 0.6em 0.4em;
   margin: 0.4em 0;
 }
+
 .block-highlight-yellow {
   background-color: white;
 }
@@ -142,33 +198,36 @@ div, textarea {
 .rm-code-block .cm-gutters,
 .rm-inline-code,
 code {
-  font-family: var(--code-font)!important;
+  font-family: var(--code-font) !important;
   background: #ffffff;
   color: #000000;
   border: none;
   padding: 4px 6px;
   opacity: 90%;
 }
+
 /* 1. 针对大型代码块 (CodeMirror) 的选中颜色 */
 .cm-selectionBackground,
 .cm-focused .cm-selectionBackground,
 .cm-content ::selection {
-    background-color: #801DAE !important; /* 这里修改为你喜欢的颜色，例如深绿色 */
-    color: rgb(0, 0, 0) !important;               /* 选中时的文字颜色 */
+  background-color: #801DAE !important;
+  /* 这里修改为你喜欢的颜色，例如深绿色 */
+  color: rgb(0, 0, 0) !important;
+  /* 选中时的文字颜色 */
 }
 
 /* 2. 针对行内代码 (Inline Code) 的选中颜色 */
 code::selection {
-    background-color: #801DAE !important;
-    color: rgb(0, 0, 0) !important;
+  background-color: #801DAE !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 /* 使 CodeMirror 选中背景更圆润，更像椭圆形 */
 .cm-selectionBackground {
-    border-radius: 10px !important;
-    /* 利用阴影扩张背景，使其看起来更像椭圆 */
-    box-shadow: 0 0 0 2px #3eaf7c !important; 
-    background-color: #3eaf7c !important;
+  border-radius: 10px !important;
+  /* 利用阴影扩张背景，使其看起来更像椭圆 */
+  box-shadow: 0 0 0 2px #3eaf7c !important;
+  background-color: #3eaf7c !important;
 }
 
 /* Queries */
@@ -176,57 +235,72 @@ code::selection {
   border: 0.5px solid #e4e9ec;
   border-radius: 5px;
 }
+
 .rm-query .rm-query-title {
   background-color: #f7f8f8;
   padding: 0.8em;
   color: #d1dbe2;
   font-size: 80%;
 }
+
 .rm-reference-main.rm-query-content {
   padding: 0.8em;
 }
-.rm-reference-main, .rm-reference-item {
+
+.rm-reference-main,
+.rm-reference-item {
   font-size: 95%;
   opacity: 95%;
 }
+
 .rm-reference-main .rm-reference-item .controls {
   margin-left: -1em;
 }
+
 .rm-ref-page-view {
   padding: 0.4em 0.2em;
 }
+
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
   padding: 6px;
 }
+
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row:hover {
-    background-color: white;
+  background-color: white;
 }
-div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span {
+
+div.flex-v-box.starred-pages-wrapper>div.flex-h-box>span {
   font-size: 14px;
   opacity: 80%;
   letter-spacing: 0.04em;
 }
-div.roam-sidebar-container.noselect > div > div {
+
+div.roam-sidebar-container.noselect>div>div {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
+
 #block-input {
   background: white;
 }
-.roam-body #block-input > span > div {
+
+.roam-body #block-input>span>div {
   padding: 6px 24px;
   background: white;
 }
 
-.rm-block-text, .roam-block {
+.rm-block-text,
+.roam-block {
   font-size: 1.1em;
 }
-#right-sidebar > div {
+
+#right-sidebar>div {
   background-color: var(--bg-color);
   border-left: 1px solid #e9ebef;
   padding: 20px;
   overflow: none;
 }
+
 .rm-page-ref-brackets {
   display: none;
 }
@@ -234,7 +308,7 @@ div.roam-sidebar-container.noselect > div > div {
 
 /* Bullet Points */
 .rm-bullet .rm-bullet__inner {
-box-sizing: content-box;
+  box-sizing: content-box;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -245,6 +319,7 @@ box-sizing: content-box;
   border: 4px solid transparent;
   background-color: #E3ECF2;
 }
+
 .rm-bullet.rm-bullet--closed .rm-bullet__inner {
   box-sizing: content-box;
   border: 4px solid #D8E5EE;
@@ -259,6 +334,7 @@ box-sizing: content-box;
 .kanban-board {
   background-color: #fff;
 }
+
 .kanban-card {
   background-color: white;
   margin: 8px;
@@ -266,11 +342,13 @@ box-sizing: content-box;
   padding: 10px;
   border-radius: 2px;
 }
+
 .kanban-title {
   text-align: center;
   font-weight: bold;
   padding-top: 6px;
 }
+
 .kanban-column {
   background-color: #e4edf2;
   margin: 0px 4px 0px 4px;
@@ -280,7 +358,7 @@ box-sizing: content-box;
 
 /* Block references */
 .rm-block-ref::before {
-  content:"";
+  content: "";
   display: inline-block;
   width: 2px;
   border-radius: 2px;
@@ -288,16 +366,19 @@ box-sizing: content-box;
   background: var(--color-primary-light);
   margin-right: 6px;
 }
+
 .rm-block-ref:hover {
   background: none;
   cursor: pointer;
 }
+
 .rm-block-ref {
   border-bottom: none;
   font-size: 1em;
   color: var(--text-color);
   opacity: 90%;
 }
+
 .block-ref-count-button {
   color: var(--color-primary);
   font-weight: 800;
@@ -308,12 +389,15 @@ box-sizing: content-box;
 .checkmark {
   background: #fff;
 }
-.check-container input:checked ~ .checkmark {
+
+.check-container input:checked~.checkmark {
   background: #33bdea;
 }
-.check-container input:checked ~ .checkmark:after {
+
+.check-container input:checked~.checkmark:after {
   border-color: #fff;
 }
+
 .rm-reference-item {
   margin-top: 8px;
   border-radius: 6px;
@@ -326,51 +410,67 @@ box-sizing: content-box;
 }
 
 /* Headings */
-.rm-level1, .rm-heading-level-1>.rm-block__self .rm-block__input {
+.rm-level1,
+.rm-heading-level-1>.rm-block__self .rm-block__input {
   color: #142334;
   font-size: 1.8rem;
   font-weight: 600;
-  font-family: "Palatino Linotype" ,"方正清刻本悦宋简体";
+  font-family: "Palatino Linotype", "方正清刻本悦宋简体";
 }
-.rm-level2, .rm-heading-level-2>.rm-block__self .rm-block__input {
+
+.rm-level2,
+.rm-heading-level-2>.rm-block__self .rm-block__input {
   color: #395260;
   font-size: 1.6rem;
   font-weight: 500;
   font-family: "Palatino Linotype", "方正清刻本悦宋简体" !important;
 }
-.rm-level3, .rm-heading-level-3>.rm-block__self .rm-block__input {
-  color:  #404A57;
+
+.rm-level3,
+.rm-heading-level-3>.rm-block__self .rm-block__input {
+  color: #404A57;
   font-weight: 400;
   font-size: 1.4rem;
-  font-family: "Palatino Linotype" ,"方正清刻本悦宋简体";
+  font-family: "Palatino Linotype", "方正清刻本悦宋简体";
 }
 
 a {
- color: var(--color-secondary);
-font-weight: 600;
+  color: var(--color-secondary);
+  font-weight: 600;
 }
-.intercom-app, .intercom-launcher-frame, #intercom-container {
+
+.intercom-app,
+.intercom-launcher-frame,
+#intercom-container {
   display: none;
 }
+
 .roam-body .roam-app .roam-sidebar-container {
   background-color: var(--page-color);
   border-right: 1px var(--color-subtle-border) solid;
 }
-.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page, .roam-body .roam-app .roam-sidebar-container > * {
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page,
+.roam-body .roam-app .roam-sidebar-container>* {
   opacity: 80%;
   box-shadow: none;
 }
-.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover, .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover {
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover,
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover {
   background: var(--page-color);
   color: var(--text-color);
   opacity: 100%;
 }
+
 #buffer.tall {
   height: calc(100vh - 50px);
 }
+
 .check-container {
   padding-right: 4px;
 }
+
 span.rm-page-ref {
   border-radius: 2px;
   padding-left: 1px;
@@ -382,13 +482,14 @@ span.rm-page-ref {
 }
 
 /* URL links */
-.rm-alias--external, .rm-alias--external:hover {
+.rm-alias--external,
+.rm-alias--external:hover {
   font-weight: 600;
 }
 
 /* Set the colour of popover tooltip text to white */
 .bp3-tooltip .bp3-popover-content div {
-color: white;
+  color: white;
 }
 
 /* Page Link and Tag Colours */
@@ -397,7 +498,8 @@ span.rm-page-ref.rm-page-ref--tag {
   border-radius: 15px;
   display: inline-block;
   padding: 2px 8px;
-  border-radius: 15px; /* 椭圆 */
+  border-radius: 15px;
+  /* 椭圆 */
   background: #FF3300;
   line-height: 1.6;
   font-weight: 600;
@@ -408,20 +510,24 @@ span.rm-page-ref.rm-page-ref--tag {
    - 使用 ::after 渲染 `attr(data-tag)`（不含 '#') 显示真实标签文本，
    - 恢复子元素（如 popover target）的字体尺寸，保证交互不受影响。 */
 span.rm-page-ref[data-tag] {
-  font-size: 0; /* 隐藏原始文本 */
+  font-size: 0;
+  /* 隐藏原始文本 */
   line-height: 0;
 }
+
 span.rm-page-ref[data-tag]::after {
-    content: attr(data-tag);
-    display: inline-block;
-    font-size: 14px; /* 或者使用 1rem，给它一个明确的大小 */
-    line-height: 1.6;
-    color: #fefefe; 
-    font-weight: inherit;
+  content: attr(data-tag);
+  display: inline-block;
+  font-size: 14px;
+  /* 或者使用 1rem，给它一个明确的大小 */
+  line-height: 1.6;
+  color: #fefefe;
+  font-weight: inherit;
 }
+
 /* 为通用标签 ::after 伪元素明确设置颜色 */
 span.rm-page-ref.rm-page-ref--tag[data-tag]::after {
-    color: #fefefe;
+  color: #fefefe;
 }
 
 /* 恢复内部子元素（比如 popover 按钮/图标）的字体尺寸，保持交互可用 */
@@ -431,6 +537,7 @@ span.rm-page-ref[data-tag] .bp3-popover-target {
   font-size: var(--font-size);
   line-height: inherit;
 }
+
 .rm-page-ref--link {
   color: var(--color-primary);
   font-weight: 600;
@@ -459,8 +566,9 @@ span.rm-page-ref[data-tag] .bp3-popover-target {
 }
 
 /* Disabled button text color */
-.bp3-button.bp3-disabled, .bp3-button.bp3-disabled .bp3-button-text {
-    color: white !important;
+.bp3-button.bp3-disabled,
+.bp3-button.bp3-disabled .bp3-button-text {
+  color: white !important;
 }
 
 
@@ -496,15 +604,41 @@ span[data-link-title^="Alive"] .rm-page-ref {
 }
 
 /* Individual background colors */
-span.rm-page-ref[data-tag="Tweet"] { background: var(--tag-tweet); }
-span.rm-page-ref[data-tag="Literature Notes"] { background: var(--tag-literature); }
-span.rm-page-ref[data-tag="Evergreens"] { background: var(--tag-evergreens); }
-span.rm-page-ref[data-tag="Essay"] { background: var(--tag-essay); }
-span.rm-page-ref[data-tag="Talk"] { background: var(--tag-talk); }
-span.rm-page-ref[data-tag="Waiting"] { background: var(--tag-waiting); }
-span.rm-page-ref[data-tag="Researching"] { background: var(--tag-researching); }
-span.rm-page-ref[data-tag="Synthesising"] { background: var(--tag-synthesising); }
-span.rm-page-ref[data-tag="Alive"] { background: var(--tag-alive); }
+span.rm-page-ref[data-tag="Tweet"] {
+  background: var(--tag-tweet);
+}
+
+span.rm-page-ref[data-tag="Literature Notes"] {
+  background: var(--tag-literature);
+}
+
+span.rm-page-ref[data-tag="Evergreens"] {
+  background: var(--tag-evergreens);
+}
+
+span.rm-page-ref[data-tag="Essay"] {
+  background: var(--tag-essay);
+}
+
+span.rm-page-ref[data-tag="Talk"] {
+  background: var(--tag-talk);
+}
+
+span.rm-page-ref[data-tag="Waiting"] {
+  background: var(--tag-waiting);
+}
+
+span.rm-page-ref[data-tag="Researching"] {
+  background: var(--tag-researching);
+}
+
+span.rm-page-ref[data-tag="Synthesising"] {
+  background: var(--tag-synthesising);
+}
+
+span.rm-page-ref[data-tag="Alive"] {
+  background: var(--tag-alive);
+}
 
 
 /* Other Tag Styles */
@@ -526,8 +660,9 @@ span[data-link-title^="Idea Bank"] .rm-page-ref {
   font-weight: 700;
   line-height: 1.4em;
 }
+
 span.rm-page-ref[data-tag="Idea Bank"]:before {
-  content:"✦ ";
+  content: "✦ ";
 }
 
 span.rm-page-ref[data-tag="Illustrated Notes"],
@@ -555,24 +690,31 @@ span.rm-page-ref[data-tag="Video Tutorial"],
 span[data-link-title^="Video Tutorial"] .rm-page-ref {
   color: var(--tag-video-tutorial);
 }
+
 span.rm-page-ref[data-tag="Essay"] {
   background: var(--tag-essay);
 }
+
 span.rm-page-ref[data-tag="Talk"] {
   background: var(--tag-talk);
 }
+
 span.rm-page-ref[data-tag="Waiting"] {
   background: var(--tag-waiting);
 }
+
 span.rm-page-ref[data-tag="Researching"] {
   background: var(--tag-researching);
 }
+
 span.rm-page-ref[data-tag="Synthesising"] {
   background: var(--tag-synthesising);
 }
+
 span.rm-page-ref[data-tag="Alive"] {
   background: var(--tag-alive);
 }
+
 span.rm-page-ref[data-tag="Essay"],
 span.rm-page-ref[data-tag="Talk"],
 span.rm-page-ref[data-tag="Waiting"],
@@ -601,18 +743,23 @@ span[data-link-title^="Article/"] .rm-page-ref,
 span[data-link-title^="Video/"] .rm-page-ref {
   color: var(--tag-book);
 }
+
 span[data-link-title^="Evergreen/"] .rm-page-ref {
   color: var(--tag-evergreen-page);
 }
+
 span[data-link-title^="➽"] .rm-page-ref {
   color: var(--tag-arrow);
 }
+
 span[data-link-title^="Project/"] .rm-page-ref {
   color: var(--tag-project);
 }
+
 span[data-link-title^="Area/"] .rm-page-ref {
   color: var(--tag-area);
 }
+
 span[data-link-title^="Course/"] .rm-page-ref {
   color: var(--tag-course);
 }
@@ -638,8 +785,9 @@ span[data-link-title^="Idea/"] .rm-page-ref {
   font-weight: 700;
   line-height: 1.4em;
 }
+
 span[data-link-title^="Idea/"] .rm-page-ref::before {
-  content:"✦ ";
+  content: "✦ ";
 }
 
 
@@ -661,11 +809,25 @@ span[data-link-title^="Idea/"] .rm-page-ref::before {
   margin-top: 2px;
 }
 
-.roam-block-container[data-page-links*='Claim'] { background: var(--block-claim-bg); }
-.roam-block-container[data-page-links*='Questions'] { background: var(--block-questions-bg); }
-.roam-block-container[data-page-links*='Response'] { background: var(--block-response-bg); }
-.roam-block-container[data-page-links*='Evidence'] { background: var(--block-evidence-bg); }
-.roam-block-container[data-page-links*='DirectQuote'] { background: var(--block-directquote-bg); }
+.roam-block-container[data-page-links*='Claim'] {
+  background: var(--block-claim-bg);
+}
+
+.roam-block-container[data-page-links*='Questions'] {
+  background: var(--block-questions-bg);
+}
+
+.roam-block-container[data-page-links*='Response'] {
+  background: var(--block-response-bg);
+}
+
+.roam-block-container[data-page-links*='Evidence'] {
+  background: var(--block-evidence-bg);
+}
+
+.roam-block-container[data-page-links*='DirectQuote'] {
+  background: var(--block-directquote-bg);
+}
 
 /* Block Tag Annotation Colors */
 span.rm-page-ref[data-tag="Claim"],
@@ -683,31 +845,41 @@ span[data-link-title^="DirectQuote"] .rm-page-ref {
 }
 
 span.rm-page-ref[data-tag="Claim"],
-span[data-link-title^="Claim"] .rm-page-ref { color: var(--tag-claim-color); }
+span[data-link-title^="Claim"] .rm-page-ref {
+  color: var(--tag-claim-color);
+}
 
 span.rm-page-ref[data-tag="Questions"],
-span[data-link-title^="Questions"] .rm-page-ref { color: var(--tag-questions-color); }
+span[data-link-title^="Questions"] .rm-page-ref {
+  color: var(--tag-questions-color);
+}
 
 span.rm-page-ref[data-tag="Response"],
-span[data-link-title^="Response"] .rm-page-ref { color: var(--tag-response-color); }
+span[data-link-title^="Response"] .rm-page-ref {
+  color: var(--tag-response-color);
+}
 
 span.rm-page-ref[data-tag="Evidence"],
-span[data-link-title^="Evidence"] .rm-page-ref { color: var(--tag-evidence-color); }
+span[data-link-title^="Evidence"] .rm-page-ref {
+  color: var(--tag-evidence-color);
+}
 
 span.rm-page-ref[data-tag="DirectQuote"],
-span[data-link-title^="DirectQuote"] .rm-page-ref { color: var(--tag-directquote-color); }
+span[data-link-title^="DirectQuote"] .rm-page-ref {
+  color: var(--tag-directquote-color);
+}
 
 .roam-sidebar-container .rm-db-title-container .rm-db-title {
-  color:  #DE2A18;
+  color: #DE2A18;
   padding: 4px;
   font-size: large;
   font-family: "Felix Titling", "方正清刻本悦宋简体";
 }
 
 /* Sticky Headers (refactored to reduce duplication) */
-.rm-heading-level-1 > .rm-block-main.rm-block__self:first-child,
-.rm-heading-level-2 > .rm-block-main.rm-block__self:first-child,
-.rm-heading-level-3 > .rm-block-main.rm-block__self:first-child {
+.rm-heading-level-1>.rm-block-main.rm-block__self:first-child,
+.rm-heading-level-2>.rm-block-main.rm-block__self:first-child,
+.rm-heading-level-3>.rm-block-main.rm-block__self:first-child {
   background-color: transparent !important;
   background-clip: padding-box !important;
   position: sticky !important;
@@ -717,45 +889,46 @@ span[data-link-title^="DirectQuote"] .rm-page-ref { color: var(--tag-directquote
 }
 
 .rm-bq {
-    background-color: var(--color-primary-highlight);
-    border-left: 2px solid var(--color-primary);
-    border-radius: 6px;
-    padding: 12px 16px;
-    margin: 8px 0;
-    font-family: "汉仪空山楷";
-    font-size: 0.95em;
-    color: var(--text-color);
-    text-align: left;
-    word-wrap: break-word;
-    opacity: 0.9;
+  background-color: var(--color-primary-highlight);
+  border-left: 2px solid var(--color-primary);
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 8px 0;
+  font-family: "HYKongShanKai", "汉仪空山楷 简", "汉仪空山楷", cursive;
+  font-size: 0.95em;
+  color: var(--text-color);
+  text-align: left;
+  word-wrap: break-word;
+  opacity: 0.9;
 }
 
 .rm-bullet__inner--user-icon {
-    box-sizing: content-box;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 50%;
-    width: 6px;
-    height: 6px;
-    background-clip: content-box;
-    border: 4px solid transparent;
-    background-color: #000000;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-clip: content-box;
+  border: 4px solid transparent;
+  background-color: #000000;
 }
 
-.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page{
-  color:#000000
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
+  color: #000000
 }
-div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span{
+
+div.flex-v-box.starred-pages-wrapper>div.flex-h-box>span {
   color: #ED5A65;
 }
 
-.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button{
-  color:#000000
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button {
+  color: #000000
 }
 
 .rm-settings .rm-settings-panel .rm-settings-panel__description {
-    color: #f8f8f8;
+  color: #f8f8f8;
 }
 
 .rm-settings .rm-settings-panel__section h1 {
@@ -767,7 +940,7 @@ div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span{
 }
 
 
-.rm-settings .rm-settings-panel h3{
+.rm-settings .rm-settings-panel h3 {
   color: #E3EFD1 !important;
 }
 
@@ -783,54 +956,55 @@ div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span{
   color: #E3EFD1 !important;
 }
 
-.rm-settings input[type="text"]{
+.rm-settings input[type="text"] {
   background-color: #000000;
 }
 
 
 
-.rm-extensions-installed__header{
-  color:#e3efd1;
+.rm-extensions-installed__header {
+  color: #e3efd1;
 }
 
-.rm-extension-installed__name{
-  color:#e3efd1;
+.rm-extension-installed__name {
+  color: #e3efd1;
 }
 
-.rm-extensions-marketplace .rm-extensions-marketplace-search{
-  background-color:var(--bg-color);
+.rm-extensions-marketplace .rm-extensions-marketplace-search {
+  background-color: var(--bg-color);
 }
 
-.rm-extensions-marketplace .rm-extensions-marketplace-details{
-  background-color:var(--bg-color);
-}
-.rm-extensions-marketplace .rm-extensions-marketplace-search__settings input{
-  background-color:#dadada;
+.rm-extensions-marketplace .rm-extensions-marketplace-details {
+  background-color: var(--bg-color);
 }
 
-.rm-settings-panel__panel-config{
-  background-color:#00acc0;
+.rm-extensions-marketplace .rm-extensions-marketplace-search__settings input {
+  background-color: #dadada;
+}
+
+.rm-settings-panel__panel-config {
+  background-color: #00acc0;
 }
 
 .rm-reference-item {
-    margin-top: 8px;
-    border-radius: 15px;
-    border: none;
-    margin-right: 8px;
-    flex: 1 1 100%;
-    word-break: break-word;
-    background-color: #ffffff;
-    padding: 0px;
+  margin-top: 8px;
+  border-radius: 15px;
+  border: none;
+  margin-right: 8px;
+  flex: 1 1 100%;
+  word-break: break-word;
+  background-color: #ffffff;
+  padding: 0px;
 }
 
 /* Inline-style override: 覆盖 DevTools 中显示的 "color: rgb(206, 217, 224)"（Linked References 标题）
    Scoped under .rm-reference-wrapper 以减少对其他元素的影响 */
 .rm-reference-wrapper div[style*="color: rgb(206, 217, 224)"] {
-  color: #144A74!important;
+  color: #144A74 !important;
 }
 
 .rm-unlinked-reference-container strong {
-  color: #144A74!important;
+  color: #144A74 !important;
 }
 
 .rm-settings .rm-settings-panel .rm-select-wrapper {
@@ -841,17 +1015,17 @@ div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span{
   color: black !important;
 }
 
-div > .bp3-icon-caret-down + strong,
-div > .bp3-icon-caret-right + strong {
-    color: rgba(28, 172, 225, 0.826) !important;
+div>.bp3-icon-caret-down+strong,
+div>.bp3-icon-caret-right+strong {
+  color: rgba(28, 172, 225, 0.826) !important;
 }
 
 /* -------------------------- */
 /* Custom Highlights          */
 /* -------------------------- */
 span.rm-highlight {
-    text-decoration: none !important;
-    background: linear-gradient(180deg, rgba(255, 199, 115, 0) 60%, #B0A4E3 60%);
+  text-decoration: none !important;
+  background: linear-gradient(180deg, rgba(255, 199, 115, 0) 60%, #B0A4E3 60%);
 }
 
 /* Hide specific tags */
@@ -867,10 +1041,12 @@ span.rm-page-ref[data-tag="h/orange"] {
 /* --- 智能连接线 (Smart Curved Lines) --- */
 
 /* 1. 隐藏 Roam 默认的垂直灰线 */
-.rm-multibar, .block-border-left {
+.rm-multibar,
+.block-border-left {
   display: none !important;
   visibility: hidden !important;
 }
+
 .rm-block-children::before {
   display: none !important;
 }
@@ -881,91 +1057,106 @@ span.rm-page-ref[data-tag="h/orange"] {
 /* -------------------------- */
 /* --- Custom Night Mode Override for bp3-dark --- */
 body.bp3-dark {
-    /* Apply the new palette */
-    --bg-color: #1C1C1E;
-    --page-color: #2C2C2E;
-    --text-color: #EAEAEB;
-    --light-text-color: #8A8A8E;
-    --page-tag-color: #c678dd;
-    --color-primary: #61AFEF; /* 天青 - Brighter blue for better visibility */
-    --color-primary-light: #82c0ff;
-    --color-primary-highlight: #3A3A3C;
-    --color-secondary: #FFD111; /* 藤黄 - Higher contrast yellow */
-    --color-subtle-border: #3A3A3C;
-    --tag-tweet: #61afef;
-    --tag-literature: #c678dd;
-    --tag-evergreens: #98c379;
-    --tag-seedling: #56b6c2;
-    --tag-idea-bank: #e5c07b;
-    --tag-illustrated: #61afef;
-    --tag-garden: #98c379;
-    --tag-video-tutorial: #e06c75;
-    --tag-essay: #98c379;
-    --tag-livestream: #e06c75;
-    --tag-talk: #61afef;
-    --tag-waiting: #888888;
-    --tag-researching: #61afef;
-    --tag-synthesising: #c678dd;
-    --tag-alive: #e06c75;
-    --tag-book: #61afef;
-    --tag-evergreen-page: #98c379;
-    --tag-arrow: #56b6c2;
-    --tag-project: #c678dd;
-    --tag-area: #98c379;
-    --tag-course: #61afef;
-    --tag-idea: #e5c07b;
-    --tag-claim-color: #e06c75;
-    --tag-questions-color: #61afef;
-    --tag-response-color: #c678dd;
-    --tag-evidence-color: #e5c07b;
-    --tag-directquote-color: #98c379;
-    --block-claim-bg: rgba(224, 108, 117, 0.1);
-    --block-questions-bg: rgba(97, 175, 239, 0.1);
-    --block-response-bg: rgba(198, 120, 221, 0.1);
-    --block-evidence-bg: rgba(229, 192, 123, 0.1);
-    --block-directquote-bg: rgba(152, 195, 121, 0.1);
+  /* Apply the new palette */
+  --bg-color: #1C1C1E;
+  --page-color: #2C2C2E;
+  --text-color: #EAEAEB;
+  --light-text-color: #8A8A8E;
+  --page-tag-color: #c678dd;
+  --color-primary: #61AFEF;
+  /* 天青 - Brighter blue for better visibility */
+  --color-primary-light: #82c0ff;
+  --color-primary-highlight: #3A3A3C;
+  --color-secondary: #FFD111;
+  /* 藤黄 - Higher contrast yellow */
+  --color-subtle-border: #3A3A3C;
+  --tag-tweet: #61afef;
+  --tag-literature: #c678dd;
+  --tag-evergreens: #98c379;
+  --tag-seedling: #56b6c2;
+  --tag-idea-bank: #e5c07b;
+  --tag-illustrated: #61afef;
+  --tag-garden: #98c379;
+  --tag-video-tutorial: #e06c75;
+  --tag-essay: #98c379;
+  --tag-livestream: #e06c75;
+  --tag-talk: #61afef;
+  --tag-waiting: #888888;
+  --tag-researching: #61afef;
+  --tag-synthesising: #c678dd;
+  --tag-alive: #e06c75;
+  --tag-book: #61afef;
+  --tag-evergreen-page: #98c379;
+  --tag-arrow: #56b6c2;
+  --tag-project: #c678dd;
+  --tag-area: #98c379;
+  --tag-course: #61afef;
+  --tag-idea: #e5c07b;
+  --tag-claim-color: #e06c75;
+  --tag-questions-color: #61afef;
+  --tag-response-color: #c678dd;
+  --tag-evidence-color: #e5c07b;
+  --tag-directquote-color: #98c379;
+  --block-claim-bg: rgba(224, 108, 117, 0.1);
+  --block-questions-bg: rgba(97, 175, 239, 0.1);
+  --block-response-bg: rgba(198, 120, 221, 0.1);
+  --block-evidence-bg: rgba(229, 192, 123, 0.1);
+  --block-directquote-bg: rgba(152, 195, 121, 0.1);
 
-    /* Custom Highlight Colors */
-    --highlight-yellow: #FFB61E; /* 藤黄 */
-    --highlight-green: #61AC85; /* 庭芜绿 */
-    --highlight-blue: #83C3F7; /* 沧浪 */
-    --highlight-red: #F08383; /* 合欢红 */
-    --highlight-purple: #BD84C8; /* 紫藤 */
-    --highlight-orange: #FBC85F; /* 杏黄 */
+  /* Custom Highlight Colors */
+  --highlight-yellow: #FFB61E;
+  /* 藤黄 */
+  --highlight-green: #61AC85;
+  /* 庭芜绿 */
+  --highlight-blue: #83C3F7;
+  /* 沧浪 */
+  --highlight-red: #F08383;
+  /* 合欢红 */
+  --highlight-purple: #BD84C8;
+  /* 紫藤 */
+  --highlight-orange: #FBC85F;
+  /* 杏黄 */
 }
 
 /* General Overrides for Dark Theme */
-body.bp3-dark, body.bp3-dark #app {
-    background: var(--bg-color) !important;
+body.bp3-dark,
+body.bp3-dark #app {
+  background: var(--bg-color) !important;
 }
 
-body.bp3-dark .roam-article > div {
-    background: var(--page-color);
-    border-color: var(--color-subtle-border);
+body.bp3-dark .roam-article>div {
+  background: var(--page-color);
+  border-color: var(--color-subtle-border);
 }
 
 /* Custom Highlights - Dark Mode */
 body.bp3-dark span.rm-highlight {
-    color: #EEDEB0 !important;
-    background: linear-gradient(180deg, transparent 60%, #15559A 60%);
+  color: #EEDEB0 !important;
+  background: linear-gradient(180deg, transparent 60%, #15559A 60%);
 }
+
 body.bp3-dark .roam-block-container[data-page-links*='h/yellow'] span.rm-highlight {
-    background: linear-gradient(180deg, transparent 60%, var(--highlight-yellow) 60%);
+  background: linear-gradient(180deg, transparent 60%, var(--highlight-yellow) 60%);
 }
+
 body.bp3-dark .roam-block-container[data-page-links*='h/green'] span.rm-highlight {
-    background: linear-gradient(180deg, transparent 60%, var(--highlight-green) 60%);
+  background: linear-gradient(180deg, transparent 60%, var(--highlight-green) 60%);
 }
+
 body.bp3-dark .roam-block-container[data-page-links*='h/blue'] span.rm-highlight {
-    background: linear-gradient(180deg, transparent 60%, var(--highlight-blue) 60%);
+  background: linear-gradient(180deg, transparent 60%, var(--highlight-blue) 60%);
 }
+
 body.bp3-dark .roam-block-container[data-page-links*='h/red'] span.rm-highlight {
-    background: linear-gradient(180deg, transparent 60%, var(--highlight-red) 60%);
+  background: linear-gradient(180deg, transparent 60%, var(--highlight-red) 60%);
 }
+
 body.bp3-dark .roam-block-container[data-page-links*='h/purple'] span.rm-highlight {
-    background: linear-gradient(180deg, transparent 60%, var(--highlight-purple) 60%);
+  background: linear-gradient(180deg, transparent 60%, var(--highlight-purple) 60%);
 }
+
 body.bp3-dark .roam-block-container[data-page-links*='h/orange'] span.rm-highlight {
-    background: linear-gradient(180deg, transparent 60%, var(--highlight-orange) 60%);
+  background: linear-gradient(180deg, transparent 60%, var(--highlight-orange) 60%);
 }
 
 body.bp3-dark h1,
@@ -981,39 +1172,40 @@ body.bp3-dark .rm-heading-level-2>.rm-block__self .rm-block__input,
 body.bp3-dark .rm-level3,
 body.bp3-dark .rm-heading-level-3>.rm-block__self .rm-block__input,
 body.bp3-dark .rm-title-editing-display textarea {
-    color: var(--text-color) !important;
+  color: var(--text-color) !important;
 }
 
-body.bp3-dark div, body.bp3-dark textarea {
-    color: var(--text-color);
+body.bp3-dark div,
+body.bp3-dark textarea {
+  color: var(--text-color);
 }
 
 /* Sidebar */
 body.bp3-dark .roam-body .roam-app .roam-sidebar-container {
-    background-color: var(--bg-color);
-    border-right-color: var(--color-subtle-border);
+  background-color: var(--bg-color);
+  border-right-color: var(--color-subtle-border);
 }
 
-body.bp3-dark #right-sidebar > div {
-    background-color: var(--bg-color);
-    border-left: 1px solid var(--color-subtle-border);
+body.bp3-dark #right-sidebar>div {
+  background-color: var(--bg-color);
+  border-left: 1px solid var(--color-subtle-border);
 }
 
 /* Selected item in sidebar */
 body.bp3-dark .starred-pages .page:hover,
 body.bp3-dark .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover,
 body.bp3-dark .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row:hover {
-    background-color: var(--page-color);
+  background-color: var(--page-color);
 }
 
-body.bp3-dark .bp3-tree-node.bp3-tree-node-selected > .bp3-tree-node-content {
-    background-color: var(--color-primary) !important;
-    color: white !important;
+body.bp3-dark .bp3-tree-node.bp3-tree-node-selected>.bp3-tree-node-content {
+  background-color: var(--color-primary) !important;
+  color: white !important;
 }
 
 body.bp3-dark .starred-pages .page .active,
-body.bp3-dark .bp3-text-overflow-ellipsis > a.bp3-active {
-    background-color: var(--color-primary-highlight) !important;
+body.bp3-dark .bp3-text-overflow-ellipsis>a.bp3-active {
+  background-color: var(--color-primary-highlight) !important;
 }
 
 
@@ -1024,47 +1216,50 @@ body.bp3-dark .rm-code-block .cm-line,
 body.bp3-dark .rm-code-block .cm-gutters,
 body.bp3-dark .rm-inline-code,
 body.bp3-dark code {
-    background: #282a36; /* Using a common code bg color */
-    color: var(--text-color);
+  background: #282a36;
+  /* Using a common code bg color */
+  color: var(--text-color);
 }
 
 /* Other elements */
 body.bp3-dark .rm-embed-container,
 body.bp3-dark .rm-reference-item {
-    background-color: var(--bg-color);
-    border-color: var(--color-subtle-border);
+  background-color: var(--bg-color);
+  border-color: var(--color-subtle-border);
 }
 
 body.bp3-dark #block-input,
-body.bp3-dark .roam-body #block-input > span > div {
-    background: var(--page-color);
+body.bp3-dark .roam-body #block-input>span>div {
+  background: var(--page-color);
 }
 
 body.bp3-dark .kanban-board {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 
 body.bp3-dark .kanban-column {
-    background-color: var(--page-color);
+  background-color: var(--page-color);
 }
+
 body.bp3-dark .kanban-card {
-    background-color: var(--bg-color);
-    box-shadow: 0px 1px 2px #111;
+  background-color: var(--bg-color);
+  box-shadow: 0px 1px 2px #111;
 }
 
 body.bp3-dark span.rm-page-ref.rm-page-ref--tag {
-    background: transparent;
-    border: 1px solid var(--page-tag-color);
-    padding: 1px 7px;
+  background: transparent;
+  border: 1px solid var(--page-tag-color);
+  padding: 1px 7px;
 }
 
 body.bp3-dark span.rm-page-ref[data-tag]::after {
-    content: attr(data-tag);
-    display: inline-block;
-    font-size: 14px; /* 或者使用 1rem，给它一个明确的大小 */
-    line-height: 1.6;
-    color: #fefefe; 
-    font-weight: inherit;
+  content: attr(data-tag);
+  display: inline-block;
+  font-size: 14px;
+  /* 或者使用 1rem，给它一个明确的大小 */
+  line-height: 1.6;
+  color: #fefefe;
+  font-weight: inherit;
 }
 
 /* Stroked styles for other specific tags */
@@ -1077,81 +1272,83 @@ body.bp3-dark span.rm-page-ref[data-tag="Waiting"],
 body.bp3-dark span.rm-page-ref[data-tag="Researching"],
 body.bp3-dark span.rm-page-ref[data-tag="Synthesising"],
 body.bp3-dark span.rm-page-ref[data-tag="Alive"] {
-    background: transparent !important;
-    border-width: 1px;
-    border-style: solid;
-    padding: 1px 7px;
-    line-height: 1.6;
+  background: transparent !important;
+  border-width: 1px;
+  border-style: solid;
+  padding: 1px 7px;
+  line-height: 1.6;
 }
 
 body.bp3-dark span.rm-page-ref[data-tag="Tweet"]::after,
 body.bp3-dark span.rm-page-ref[data-tag="Tweet"] {
-    color: var(--tag-tweet);
-    border-color: var(--tag-tweet);
+  color: var(--tag-tweet);
+  border-color: var(--tag-tweet);
 }
 
 body.bp3-dark span.rm-page-ref[data-tag="Literature Notes"]::after,
 body.bp3-dark span.rm-page-ref[data-tag="Literature Notes"] {
-    color: var(--tag-literature);
-    border-color: var(--tag-literature);
+  color: var(--tag-literature);
+  border-color: var(--tag-literature);
 }
 
 body.bp3-dark span.rm-page-ref[data-tag="Evergreens"]::after,
 body.bp3-dark span.rm-page-ref[data-tag="Evergreens"] {
-    color: var(--tag-evergreens);
-    border-color: var(--tag-evergreens);
+  color: var(--tag-evergreens);
+  border-color: var(--tag-evergreens);
 }
 
 body.bp3-dark span.rm-page-ref[data-tag="Essay"]::after,
 body.bp3-dark span.rm-page-ref[data-tag="Essay"] {
-    color: var(--tag-essay);
-    border-color: var(--tag-essay);
+  color: var(--tag-essay);
+  border-color: var(--tag-essay);
 }
 
 body.bp3-dark span.rm-page-ref[data-tag="Talk"]::after,
 body.bp3-dark span.rm-page-ref[data-tag="Talk"] {
-    color: var(--tag-talk);
-    border-color: var(--tag-talk);
+  color: var(--tag-talk);
+  border-color: var(--tag-talk);
 }
 
 body.bp3-dark span.rm-page-ref[data-tag="Waiting"]::after,
 body.bp3-dark span.rm-page-ref[data-tag="Waiting"] {
-    color: var(--tag-waiting);
-    border-color: var(--tag-waiting);
+  color: var(--tag-waiting);
+  border-color: var(--tag-waiting);
 }
 
 body.bp3-dark span.rm-page-ref[data-tag="Researching"]::after,
 body.bp3-dark span.rm-page-ref[data-tag="Researching"] {
-    color: var(--tag-researching);
-    border-color: var(--tag-researching);
+  color: var(--tag-researching);
+  border-color: var(--tag-researching);
 }
 
 body.bp3-dark span.rm-page-ref[data-tag="Synthesising"]::after,
 body.bp3-dark span.rm-page-ref[data-tag="Synthesising"] {
-    color: var(--tag-synthesising);
-    border-color: var(--tag-synthesising);
+  color: var(--tag-synthesising);
+  border-color: var(--tag-synthesising);
 }
 
 body.bp3-dark span.rm-page-ref[data-tag="Alive"]::after,
 body.bp3-dark span.rm-page-ref[data-tag="Alive"] {
-    color: var(--tag-alive);
-    border-color: var(--tag-alive);
+  color: var(--tag-alive);
+  border-color: var(--tag-alive);
 }
 
 body.bp3-dark a {
-    color: var(--color-secondary);
+  color: var(--color-secondary);
 }
 
 body.bp3-dark .rm-bullet .rm-bullet__inner {
-    background-color: var(--light-text-color);
+  background-color: var(--light-text-color);
 }
 
 body.bp3-dark .rm-bullet.rm-bullet--closed .rm-bullet__inner {
   border: 4px solid var(--light-text-color);
 }
+
 body.bp3-dark .rm-bullet__inner--user-icon {
-    background-color: var(--tag-seedling);
+  background-color: var(--tag-seedling);
 }
+
 /* --- End of Custom Night Mode --- */
 
 /* ========================================================= */
@@ -1160,100 +1357,123 @@ body.bp3-dark .rm-bullet__inner--user-icon {
 
 /* --- 通用样式 --- */
 /* 内部包装层：强制填满高度 */
-div[style*="width: 150px"][style*="overflow: hidden"] > div {
-    height: 100% !important;
-    width: 100% !important;
+div[style*="width: 150px"][style*="overflow: hidden"]>div {
+  height: 100% !important;
+  width: 100% !important;
 }
+
 /* 动画层基础尺寸 */
-.wave-animation-v19, .wave-animation-v19-back {
-    height: 60px !important; 
-    width: 200% !important;
+.wave-animation-v19,
+.wave-animation-v19-back {
+  height: 60px !important;
+  width: 200% !important;
 }
+
 /* 100% 完成时隐藏动画波浪路径 */
 div[style*="width: 150px"] svg.wave-front:not(.wave-animation-v19) path {
-    display: none !important;
+  display: none !important;
 }
+
 /* 100% 完成时隐藏后景 */
 div[style*="width: 150px"] svg.wave-back:not(.wave-animation-v19-back) {
-    display: none !important;
+  display: none !important;
 }
 
 
 /* --- 日间模式：清爽波浪 (v2 - 优化版) --- */
 /* 1. 外框容器 */
 div[style*="width: 150px"][style*="overflow: hidden"] {
-    height: 16px !important;       
-    border-radius: 9px !important; 
-    background: #eef5f9 !important; /* 更柔和的背景 */
-    border: 1px solid #dbeaf2 !important;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+  height: 16px !important;
+  border-radius: 9px !important;
+  background: #eef5f9 !important;
+  /* 更柔和的背景 */
+  border: 1px solid #dbeaf2 !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
 /* 2. 顶层波浪 (前景) */
 .wave-animation-v19 {
-    top: -28px !important; /* 与夜间模式对齐 */
-    opacity: 1 !important;
-    filter: drop-shadow(0 0 3px white); /* 柔和的白色辉光 */
+  top: -28px !important;
+  /* 与夜间模式对齐 */
+  opacity: 1 !important;
+  filter: drop-shadow(0 0 3px white);
+  /* 柔和的白色辉光 */
 }
+
 .wave-front path {
-    fill: #3498db !important; /* 明亮的天蓝色 */
+  fill: #3498db !important;
+  /* 明亮的天蓝色 */
 }
 
 /* 3. 底层波浪 (后景) */
 .wave-animation-v19-back {
-    top: -25px !important; /* 与夜间模式对齐 */
-    opacity: 0.8 !important;
-    filter: none !important;
+  top: -25px !important;
+  /* 与夜间模式对齐 */
+  opacity: 0.8 !important;
+  filter: none !important;
 }
+
 .wave-back path {
-    fill: #2980b9 !important; /* 稍深一点的蓝色 */
+  fill: #2980b9 !important;
+  /* 稍深一点的蓝色 */
 }
 
 /* 4. 100% 完成状态 */
 div[style*="width: 150px"] svg.wave-front:not(.wave-animation-v19) {
-    animation: none !important;
-    transform: none !important;
-    top: 0 !important;
-    height: 120% !important;
-    width: 100% !important;
-    left: 0 !important;
-    background: linear-gradient(180deg, #3498db 0%, #2980b9 100%) !important; /* 蓝色渐变 */
-    opacity: 1 !important;
+  animation: none !important;
+  transform: none !important;
+  top: 0 !important;
+  height: 120% !important;
+  width: 100% !important;
+  left: 0 !important;
+  background: linear-gradient(180deg, #3498db 0%, #2980b9 100%) !important;
+  /* 蓝色渐变 */
+  opacity: 1 !important;
 }
 
 
 /* --- 夜间模式：火山喷发 (v4 - 提升高度) --- */
 /* 1. 外框容器: 保持炽热感 */
 body.bp3-dark div[style*="width: 150px"][style*="overflow: hidden"] {
-    background: #1a110f !important;
-    border: 1px solid #ff4800 !important;
-    box-shadow: inset 0 0 10px 2px rgba(255, 87, 34, 0.7), 0 0 12px rgba(255, 87, 34, 0.5);
+  background: #1a110f !important;
+  border: 1px solid #ff4800 !important;
+  box-shadow: inset 0 0 10px 2px rgba(255, 87, 34, 0.7), 0 0 12px rgba(255, 87, 34, 0.5);
 }
 
 /* 2. 顶层熔岩 (前景): 大幅提升高度 */
 body.bp3-dark .wave-animation-v19 {
-    top: -28px !important; /* 大幅调高，参考日间模式并增强 */
-    opacity: 1 !important;
-    filter: drop-shadow(0 0 6px #ffc107); /* 增强辉光 */
+  top: -28px !important;
+  /* 大幅调高，参考日间模式并增强 */
+  opacity: 1 !important;
+  filter: drop-shadow(0 0 6px #ffc107);
+  /* 增强辉光 */
 }
+
 body.bp3-dark .wave-front path {
-    fill: #FFC107 !important; /* 使用更耀眼的亮黄色 */
-    opacity: 1 !important;
+  fill: #FFC107 !important;
+  /* 使用更耀眼的亮黄色 */
+  opacity: 1 !important;
 }
 
 /* 3. 底层熔岩 (后景): 相应提升高度 */
 body.bp3-dark .wave-animation-v19-back {
-    top: -25px !important; /* 保持与顶层的相对位置，整体调高 */
-    opacity: 1 !important;
-    filter: none !important; /* 底层不需要模糊 */
+  top: -25px !important;
+  /* 保持与顶层的相对位置，整体调高 */
+  opacity: 1 !important;
+  filter: none !important;
+  /* 底层不需要模糊 */
 }
+
 body.bp3-dark .wave-back path {
-    fill: #E65100 !important; /* 使用更深的暗橙色 */
-    opacity: 1 !important;
+  fill: #E65100 !important;
+  /* 使用更深的暗橙色 */
+  opacity: 1 !important;
 }
 
 /* 4. 100% 完成状态: 填满炽热的熔岩 */
 body.bp3-dark div[style*="width: 150px"] svg.wave-front:not(.wave-animation-v19) {
-    background: linear-gradient(180deg, #FFC107 0%, #FF9800 100%) !important; /* 渐变填充更有质感 */
-    box-shadow: 0 0 12px #FF5722; /* 完成时也发光 */
+  background: linear-gradient(180deg, #FFC107 0%, #FF9800 100%) !important;
+  /* 渐变填充更有质感 */
+  box-shadow: 0 0 12px #FF5722;
+  /* 完成时也发光 */
 }
-
