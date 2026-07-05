@@ -3339,6 +3339,13 @@ body .bp3-overlay .bp3-dialog.rm-modal-dialog--settings .rm-extension-settings-h
     color: var(--autocomplete-row-hover-text) !important;
 }
 
+/* dont-focus-block：夜间模式背景适配为主题色 */
+body.rm-dark-theme .roam-app .dont-focus-block,
+body.rm-dark-theme .dont-focus-block {
+    background-color: var(--m-surface) !important;
+    color: var(--text-color) !important;
+}
+
 /* rm-aliases 区域：Aliases 标题与按钮文字颜色与日夜间统一 */
 .rm-autocomplete__results .rm-aliases {
     background-color: transparent;
@@ -4013,6 +4020,13 @@ html body .rm-command-palette .rm-command-palette__scroll-container .rm-command-
 /* 夜间模式：PDF 工具栏背景与主题一致 */
 body.rm-dark-theme .roam-app .rm-pdf-toolbar {
     background-color: var(--bg-color) !important;
+}
+
+/* 夜间模式：PDF 高亮提示 tip 背景适配为主题色 */
+body.rm-dark-theme .roam-app .rm-pdf-ghost-highlight-tip,
+body.rm-dark-theme .rm-pdf-ghost-highlight-tip {
+    background-color: var(--m-surface) !important;
+    color: var(--text-color) !important;
 }
 
 /* PDF 文档内搜索框（rm-pdf-find）：黑色 + body 字体 */
