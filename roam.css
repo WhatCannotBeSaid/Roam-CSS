@@ -4010,6 +4010,11 @@ html body .rm-command-palette .rm-command-palette__scroll-container .rm-command-
     font-family: var(--body-font);
 }
 
+/* 夜间模式：PDF 工具栏背景与主题一致 */
+body.rm-dark-theme .roam-app .rm-pdf-toolbar {
+    background-color: var(--bg-color) !important;
+}
+
 /* PDF 文档内搜索框（rm-pdf-find）：黑色 + body 字体 */
 .roam-app .rm-pdf-find,
 .roam-app .rm-pdf-find input,
