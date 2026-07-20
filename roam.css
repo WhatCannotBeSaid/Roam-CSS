@@ -4042,6 +4042,7 @@ body.rm-dark-theme .rm-pdf-ghost-highlight-tip {
     color: rgba(0, 0, 0, 0.6);
 }
 
+
 /* #sup 脚注上标：去除 ^^…^^ 高亮背景，保持干净的上标样式 */
 .rm-page-ref[data-tag="sup"]~.rm-highlight,
 span[data-tag="sup"]~.rm-highlight,
