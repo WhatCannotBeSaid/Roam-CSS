@@ -2081,6 +2081,29 @@ body.rm-dark-theme .roam-app .bp3-menu-item:has(span[data-tag="assumption"]) {
     color: var(--ui-surface-text) !important;
 }
 
+/* Toast 内链接：Blueprint 默认白/浅蓝仅对彩色 intent 背景成立；本主题已把 .bp3-toast 背景
+   统一为 --ui-surface-bg（日间浅色 / 夜间深色），故链接改用主题双链色 --m-page-ref 保证可读
+   （日间 #0A7F75 对浅背景对比度 ≈4.5:1，夜间 #2DD4BF 对深背景亦可读） */
+body:not(.rm-dark-theme) .bp3-toast a,
+body:not(.rm-dark-theme) .bp3-toast[class*="bp3-intent-"] a {
+    color: var(--m-page-ref) !important;
+}
+
+body:not(.rm-dark-theme) .bp3-toast a:hover,
+body:not(.rm-dark-theme) .bp3-toast[class*="bp3-intent-"] a:hover {
+    color: var(--m-page-ref-hover, var(--m-page-ref)) !important;
+}
+
+body.rm-dark-theme .bp3-toast a,
+body.rm-dark-theme .bp3-toast[class*="bp3-intent-"] a {
+    color: var(--m-page-ref) !important;
+}
+
+body.rm-dark-theme .bp3-toast a:hover,
+body.rm-dark-theme .bp3-toast[class*="bp3-intent-"] a:hover {
+    color: var(--m-page-ref-hover, var(--m-page-ref)) !important;
+}
+
 /* bp3-popover 相关版式照搬 system.css，配色与字体保留 roam 设置 */
 
 .bp3-menu {
