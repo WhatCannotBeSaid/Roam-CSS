@@ -393,6 +393,13 @@ body.rm-dark-theme .roam-app .roam-app,
     --text-color: var(--m-text);
     --light-text-color: var(--m-text-muted);
     --page-color: var(--m-surface);
+    /* 标题/引用/强调等派生色变量同样显式重定义，防止夜间标题回落为正文白色 */
+    --title-display-color: var(--m-title-display);
+    --heading-h1-color: var(--m-heading-h1);
+    --heading-h2-color: var(--m-heading-h2);
+    --heading-h3-color: var(--m-heading-h3);
+    --strong-color: var(--heading-h1-color);
+    --blockquote-text: var(--m-blockquote);
 
     --block-highlight-bg: oklch(from var(--m-primary) l c h / 0.20);
     --color-subtle-border: oklch(from var(--m-text) l c h / 0.08);
@@ -653,9 +660,9 @@ body.rm-dark-theme .bp3-dialog .bp3-button:not([class*="bp3-intent-"]):hover {
     color: var(--text-color) !important;
 }
 
-/* 夜间模式：补强深色界面中的默认黑灰文本，保证主体文字和控件文字可读 */
+/* 夜间模式：给正文/控件容器设基础文字色，正文文字经继承取色；
+   不用 * 强压后代——标题/双链/标签/外链/引用块等语义元素各自带色，须保留语义色相 */
 body.rm-dark-theme .roam-app .roam-article,
-body.rm-dark-theme .roam-app .roam-article *,
 body.rm-dark-theme .roam-app .roam-sidebar-container,
 body.rm-dark-theme .roam-app .roam-sidebar-container *,
 body.rm-dark-theme .roam-app .bp3-menu-item,
@@ -836,7 +843,7 @@ body .bp3-text-overflow-ellipsis {
 
 /* 仅标题块自身内容区，不作用到 .rm-block-children 内子块（回车后新块保持正文） */
 .roam-app :is(h1:not(.rm-title-display), .roam-block-container.rm-level1 > .rm-block-main, .roam-block-container.rm-level1 > .rm-block-main .rm-block-text, .roam-block-container.rm-heading-level-1 > .rm-block__self .rm-block__input, .roam-block-container.rm-heading-level-1 > .rm-block-main .rm-block__input, .roam-block-container.rm-heading-level-1 > .rm-block-main .rm-block-text) {
-    color: var(--heading-h1-color);
+    color: var(--heading-h1-color) !important;
     font-family: var(--heading-font);
     font-size: var(--fs-h1);
 }
@@ -858,7 +865,7 @@ body .bp3-text-overflow-ellipsis {
 }
 
 .roam-app :is(h3, .roam-block-container.rm-level3 > .rm-block-main, .roam-block-container.rm-level3 > .rm-block-main .rm-block-text, .roam-block-container.rm-heading-level-3 > .rm-block__self .rm-block__input, .roam-block-container.rm-heading-level-3 > .rm-block-main .rm-block__input, .roam-block-container.rm-heading-level-3 > .rm-block-main .rm-block-text) {
-    color: var(--heading-h3-color);
+    color: var(--heading-h3-color) !important;
     font-family: var(--heading-font);
     font-size: var(--fs-h3);
 }
@@ -878,6 +885,17 @@ body:not(.rm-dark-theme) .roam-app .rm-alias--external {
 
 body:not(.rm-dark-theme) .roam-app a:not(.rm-alias--page):not(.rm-alias--block):hover,
 body:not(.rm-dark-theme) .roam-app .rm-alias--external:hover {
+    color: var(--m-link-hover, var(--m-link)) !important;
+}
+
+/* 夜间：外链/外部 alias 复用语义紫 --m-link（与上方日间分支对称），避免回落为 --color-secondary 或正文近白色 */
+body.rm-dark-theme .roam-app a:not(.rm-alias--page):not(.rm-alias--block),
+body.rm-dark-theme .roam-app .rm-alias--external {
+    color: var(--m-link);
+}
+
+body.rm-dark-theme .roam-app a:not(.rm-alias--page):not(.rm-alias--block):hover,
+body.rm-dark-theme .roam-app .rm-alias--external:hover {
     color: var(--m-link-hover, var(--m-link)) !important;
 }
 
@@ -1682,7 +1700,7 @@ body:not(.rm-dark-theme) .roam-app a.rm-alias--block:hover {
 /* 学术标签（Academic Tag）：小型大写 + 底线下划线，排除 #Streamer 及 theorem/definition/proof/problem/counter/assumption（后者有专用配色） */
 .roam-app span.rm-page-ref--tag:not([data-tag="Streamer"]):not([data-tag="theorem"]):not([data-tag="definition"]):not([data-tag="proof"]):not([data-tag="problem"]):not([data-tag="counter"]):not([data-tag="assumption"]),
 .roam-app span.rm-page-ref[data-tag]:not([data-tag="Streamer"]):not([data-tag="theorem"]):not([data-tag="definition"]):not([data-tag="proof"]):not([data-tag="problem"]):not([data-tag="counter"]):not([data-tag="assumption"]) {
-    color: var(--tag-text-color) !important;
+    color: var(--m-tag) !important;
     font-family: var(--tag-font), var(--body-font) !important;
     font-size: var(--fs-tag) !important;
     background: transparent !important;
