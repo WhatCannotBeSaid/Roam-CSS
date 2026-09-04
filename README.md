@@ -39,7 +39,7 @@
 
 ### 🔌 交互增强 (Roam.js)
 
-- **系统日夜同步**：始终根据 `prefers-color-scheme` 为 `body` / `documentElement` 切换 `rm-dark-theme`，不注入顶栏按钮；若页面中仍有旧版 `#roam-theme-toggle-btn`，启动时会移除。
+- **系统日夜同步**：始终根据 `prefers-color-scheme` 为 `body` / `documentElement` 切换 `rm-dark-theme`，不注入顶栏按钮，也不再移除旧版 `#roam-theme-toggle-btn`（若旧按钮仍存在会保留原样）。
 - **系统主题监听**：`matchMedia("(prefers-color-scheme: dark)")` 的 `change`（及旧版 `addListener`）触发时重新应用主题。
 - **Excalidraw 主题同步**：同步 `.excalidraw` 根节点 `theme--dark / theme--light`，并处理：
   - Roam 主题 class 变化

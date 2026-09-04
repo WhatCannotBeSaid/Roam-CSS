@@ -948,8 +948,6 @@ body.rm-dark-theme .roam-app .rm-alias--external:hover {
     font-family: var(--code-font);
 }
 
-
-
 /* 夜间模式：代码块语法高亮，提升可读性 */
 body.rm-dark-theme .roam-app .rm-code-block span.cmt-comment {
     color: #9ca3af !important;
@@ -3810,8 +3808,6 @@ body,
     color: var(--text-color, var(--m-text, #313233));
 }
 
-
-
 .roam-app .bp3-input,
 .roam-app .bp3-input-group .bp3-input,
 .roam-app .rm-settings input[type="text"] {
@@ -4083,12 +4079,10 @@ body.rm-dark-theme .rm-pdf-ghost-highlight-tip {
     color: rgba(0, 0, 0, 0.6);
 }
 
-
 /* #sup 脚注上标：去除 ^^…^^ 高亮背景，保持干净的上标样式 */
 .rm-page-ref[data-tag="sup"]~.rm-highlight,
 span[data-tag="sup"]~.rm-highlight,
 .roam-app .rm-page-ref[data-tag="sup"]~.rm-highlight {
-    background-color: transparent !important;
     background: none !important;
 }
 
